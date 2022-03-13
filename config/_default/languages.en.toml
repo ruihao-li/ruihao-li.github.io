@@ -20,7 +20,7 @@ copyright = "© 2022 Ruihao Li"
   # bio = "A little bit about you"
   links = [
     { linkedin = 'https://www.linkedin.com/in/rui-hao-li/' },
-    { github = "https://github.com/ruhali" },
+    { github = "https://github.com/ruihao-li" },
     { twitter = "https://twitter.com/rui_hao_li" },
     { email = 'mailto:lrui6394@gmail.com' },
   ]

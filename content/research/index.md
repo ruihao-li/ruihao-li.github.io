@@ -42,7 +42,6 @@ I have also worked on Dirac and Majorana dark matter models that establish a pos
 ------
 
 ## Miscellaneous Notes
-
-Here are two sets of notes compiled during my Honours year at USYD based on the two courses:
-- [Introduction to Quantum Field Theory](/files/QFT_course_16.pdf)
-- [Particle Cosmology and Baryonic Astrophysics](/files/PCBAP_course_16.pdf)
+- [Quantum Field Theory in Curved Spacetime](/files/QFT_in_curved_spacetime.pdf) (2018). A short introduction to quantum field theory in curved spacetime.
+- [Introduction to Quantum Field Theory](/files/QFT_course_16.pdf) (2016). Lecture notes compiled based on the Honours course on Quantum Field Theory.
+- [Particle Cosmology and Baryonic Astrophysics](/files/PCBAP_course_16.pdf) (2016). Lecture notes compiled based on the Honours course on Particle Cosmology and Baryonic Astrophysics.

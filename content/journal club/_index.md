@@ -3,6 +3,8 @@ title: "Journal Club"
 showAuthor: false
 showDate: false
 showReadingTime: false
+# layout: "simple"
+layout: "simple"
 ---
 
 
@@ -16,4 +18,5 @@ Below are the papers presented so far:
 |  Mar 11  | APS March Meeting rehearsals  |
 |  Mar 25  | Ruihao Li: [Unpaired Majorana fermions in quantum wires](https://arxiv.org/abs/cond-mat/0010440) <br> Ozan Dernek: [Time-dependent exchange-correlation potential in lieu of self-energy](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.105.075106) |
 | Apr 8   | Niloufar Dadkhah: [Directly visualizing the momentum-forbidden dark excitons and their dynamics in atomically thin semiconductors](https://www.science.org/doi/10.1126/science.aba1029)    |
+|  Apr 22  | Diego García Ovalle (Aix-Marseille Université): [Impact of the Fermi Arc Diversity on the Berry Curvature Dipole in Time Reversal Invariant Weyl Semimetals]({{< ref "dgo_abstract" >}})  |
 |    |     |

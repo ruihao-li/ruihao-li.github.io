@@ -12,7 +12,7 @@ Starting from Spring 2022, I am co-organizing a Condensed Matter Physics (CMP) J
 
 Below are the papers presented so far:
 
-| Date      |   Papers |
+|<div style="width:120px">Date (2022)</div> |   Papers |
 | ------    | ------   |
 |  Feb 18  | Andy Lininger: [Goos-Hänchen and Imbert-Fedorov shifts in tilted Weyl semimetals](https://iopscience.iop.org/article/10.1088/1674-1056/ac4e03) <br> Mandela Mehraeen: [Anomalous Hall unidirectional magnetoresistance](https://arxiv.org/abs/2112.05703) |
 |  Mar 11  | APS March Meeting rehearsals  |

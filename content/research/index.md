@@ -26,6 +26,10 @@ I have also worked on Dirac and Majorana dark matter models that establish a pos
 
 ## Talks
 
+- [Introduction to QAOA](/files/QOSF_Meeting.pdf) (2022) <br>
+  Talk given at the [QOSF Mentorship Program](https://qosf.org/qc_mentorship/) meeting.
+- [Majorana Zero Modes in a Kitaev Chain](/files/CMP_JC_Spring_22.pdf) (2022) <br>
+  Talk given at the CMP Journal Club at CWRU in Spring 2022. 
 - [Tunable spin-charge conversion in topological Dirac semimetals](/files/Ruihao_Li_APS_22.pdf) (2022) 
   - 2022.3: APS March Meeting 2022, Chicago, IL, USA.
   - 2021.8: The 2021 Around-the-Clock Around-the-Globe magnetics Conference (AtC-AtG), Virtual.

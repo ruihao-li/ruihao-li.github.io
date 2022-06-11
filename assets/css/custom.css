@@ -2,3 +2,8 @@
 html {
   font-size: 14pt;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

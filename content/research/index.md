@@ -4,8 +4,10 @@ showAuthor: false
 showDate: false
 showReadingTime: false
 ---
-
-![image](/files/research_sample.png "Some Weyl cones and Feynman diagrams.")
+<figure>
+    <img src="/files/research_06_22.svg" width=65%/ class="center">
+    <figcaption align="center"> Some Weyl cones and Feynman diagrams. </figcaption>
+</figure>
 
 ## Overview
 

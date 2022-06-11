@@ -1,5 +1,5 @@
 ---
-title: "Fish Shell and Customization"
+title: "Fish shell and customization"
 date: 2022-05-08
 draft: false
 tags: []

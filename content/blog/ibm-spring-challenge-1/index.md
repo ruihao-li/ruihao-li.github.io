@@ -6,7 +6,7 @@ tags: []
 categories: [quantum-computing]
 ---
 
-A few weeks ago I participated in the [IBM Quantum Spring Challenge 2022](https://research.ibm.com/blog/quantum-spring-challenge-2022), which was a fun challenge to do because one of the topics covered is actually close to my heart, which is on quantum simulations of many-body systems in condensed matter physics. In these problems, we investigated a well-known phenomenon (to the condensed matter physics community, of course) called [Anderson localization](https://en.wikipedia.org/wiki/Anderson_localization) and one called [many-body localization](https://en.wikipedia.org/wiki/Many_body_localization), which I happened to gain some exposure to during the [MAGLAB Theory Winter School](https://nationalmaglab.org/news-events/events/for-scientists/winter-theory-school) earlier this year and is still an active topic of research. I will split the full discussion into three parts. This blog post will cover the first part, where we will set up the framework for investigating many-body physics on a quantum computer. This includes building the tight-binding model for a 1D quantum chain and using Trotterization for simulating dynamics of the quantum states.
+A few weeks ago I participated in the [IBM Quantum Spring Challenge 2022](https://research.ibm.com/blog/quantum-spring-challenge-2022), which was a fun challenge to do because one of the topics covered is actually close to my heart, which is on quantum simulations of many-body systems in condensed matter physics. In these problems, we investigated a well-known phenomenon (to the condensed matter physics community, of course) called [Anderson localization](https://en.wikipedia.org/wiki/Anderson_localization) and one called [many-body localization](https://en.wikipedia.org/wiki/Many_body_localization), which I happened to gain some exposure to during the [MAGLAB Theory Winter School](https://nationalmaglab.org/news-events/events/for-scientists/winter-theory-school) earlier this year and is still an active topic of research. The majority of this Challenge was about introducing and reproducing some of the results from this nicely written [quantum transport paper](https://www.nature.com/articles/s41534-022-00528-0) by Karamlou et al. I will split the full discussion into three parts. This blog post will cover the first part, where we will set up the framework for investigating many-body physics on a quantum computer. This includes building the tight-binding model for a 1D quantum chain and using Trotterization for simulating dynamics of the quantum states.
 
 The other topic of the Quantum Challenge was quantum chemistry calculations with the variational quantum eigensolver (VQE), which I do not intend to discuss this time. Interested readers are encouraged to take a look at the original announcement linked above for more details. Here is the [official Github repository](https://github.com/qiskit-community/ibm-quantum-spring-challenge-2022) if you want to have a go at the challenge problems. Without further ado, let us begin our discussion.
 
@@ -72,10 +72,10 @@ With the above setup, we are ready to build the Trotterized quantum circuit for 
 import numpy as np
 import matplotlib.pyplot as plt
 from qiskit import QuantumCircuit, QuantumRegister
-from qiskit.providers.aer import QasmSimulator
 from qiskit.circuit import Parameter
 import qiskit.quantum_info as qi
 ```
+
 We then define the `Trot_qc` function for the Trotterized quantum circuit.
 
 ```python
@@ -202,6 +202,6 @@ Here is how the plot looks like:
 
 <img src="Trot_error.svg" width=70%/ class="center">
 
-Yay 🎉! The trotter error decreases as the number of Trotter steps increases, suggesting that we have indeed implemented Trotterization correctly.
+Yay :tada:! The trotter error decreases as the number of Trotter steps increases, suggesting that we have indeed implemented Trotterization correctly.
 
 So here comes the end of the first part. In the next post, we will see how we can use the Trotterized quantum circuit that we just built to study phenomena including the quantum random walk and Anderson localization on a 1D quantum chain. Stay tuned!

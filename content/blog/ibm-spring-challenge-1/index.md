@@ -33,7 +33,7 @@ Plugging them into Eq. (1) and assuming the hoppings are homogeneous such that t
 \begin{equation}
 H_\text{tb}/\hbar = \sum_i \epsilon_i Z_i + J\sum_{\langle i,j\rangle}(X_i X_j + Y_i Y_j),
 \end{equation}
-where we have neglected a constant term (proportional to the identity operator) that is would not have any impact on the dynamics of the system.
+where we have neglected a constant term (proportional to the identity operator) that would not have any impact on the dynamics of the system.
 
 ## Trotterization
 

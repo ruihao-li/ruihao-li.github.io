@@ -6,7 +6,10 @@ tags: []
 categories: [programming]
 ---
 
-![<img src="shell_demo.png" alt="shell_demo" width="800"/>](shell_demo.png "A quick peek at the shell interface.")
+<figure>
+    <img src="shell_demo.png" width=80%/ class="center">
+    <figcaption align="center"> A quick peek at the shell interface. </figcaption>
+</figure>
 
 This weekend I spent some time tweaking the Terminal on my Mac with iTerm2 and Fish shell. Why did I do it? First of all, I have been quite fed up with the boring black-and-white look of the default Terminal app. In my opinion, the introduction of multiple colors together with glyphs/icons not only makes it look better visually, it also helps one distinguish different contents (e.g. directories, files) more easily. Moreover, I just want more customizations and features like autosuggestions to make working with command lines a little more efficient. So below are the ingredients I used to customize my Terminal and instructions for some key steps.
 

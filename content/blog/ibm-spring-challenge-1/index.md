@@ -1,8 +1,8 @@
 ---
 title: "Quantum simulation of many-body physics - I"
-date: 2022-06-03
+date: 2022-06-04
 draft: false
-tags: []
+tags: [quantum-computing]
 categories: [quantum-computing]
 ---
 

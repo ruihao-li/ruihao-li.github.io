@@ -71,7 +71,7 @@ With the above setup, we are ready to build the Trotterized quantum circuit for 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-from qiskit import QuantumCircuit, QuantumRegister
+from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
 from qiskit.circuit import Parameter
 import qiskit.quantum_info as qi
 ```

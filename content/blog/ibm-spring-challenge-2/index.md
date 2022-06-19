@@ -21,7 +21,7 @@ where we have assumed the distance of each jump to be 1. Therefore, the standard
 
 Since we are interested in particle propagation in a quantum system, we will need to deal with *quantum random walks* instead. In this case, the intrinsic quantum nature including superposition and interferences among different wavefunctions will lead to a qualitative difference from the classical counterpart. Here is a somewhat intuitive way to think about the difference between them. Imagine a "classical walker" who decides whether to step left or right by tossing a coin with two possible outcomes \\(+\\) and \\(-\\), with probabilities \\(P_+\\) and \\(P_-\\), respectively. After each toss, they would look at the result and decide which way to do. So the classical random walk traces a single path within a decision tree. In contrast, a "quantum walker" flips their coin but never looks at the outcome. Instead, at each step, they step *simultaneously* to the left and right with some complex amplitudes \\(A_+\\) and \\(A_-\\) corresponding to probabilities \\(P_+ = \lvert A_+\rvert^2\\) and \\(P_- = \lvert A_-\rvert^2\\). After many iterations the quantum random walk results in an extended wavefunction of the quantum walker that spreads out to all positions in the tree with finite amplitudes. What's more incredible is that these complex amplitudes at different sites add up for any given path and depending on the phase differences, this creates constructive or destructive interferences when measuring the probabilities at the end. A diagram illustrating the ideas above is shown below (taken from [3]).
 
-<img src="random_walks.png" width=60%/ class="center">
+<img src="random_walks.png" width=50%/ class="center">
 
 Due to the critical differences highlighted above, it can be shown that a symmetric quantum random walk in the continuous-time limit will lead to a probability distribution that follows a [Bessel function of the first kind](https://en.wikipedia.org/wiki/Bessel_function#Bessel_functions_of_the_first_kind:_J%CE%B1) [4]:
 
@@ -48,7 +48,7 @@ Again, we have set the onsite potentials to be zero to simulate a clean system w
 ```python
 def U_trot_circuits(delta_t, trotter_steps, num_qubits):
     """
-    Record all the Trotterized circuits at all Trotter steps 
+    Record a list of Trotterized circuits at all Trotter steps 
     separated by delta_t.
     
     Args:
@@ -114,7 +114,7 @@ def probability_density(delta_t, trotter_steps, num_qubits):
         result_sim = job_sim.result()
         outputstate = result_sim.get_statevector(transpiled_circ, decimals=5)
         
-        ps=[]
+        ps = []
         # Extract the probability of finding the excitation on each qubit. 
         # (e.g. for 5 qubits, we need "00001", "00010", "00100", "01000", "10000")
         for i in range(num_qubits):
@@ -174,7 +174,7 @@ def probability_density_exp(delta_t, trotter_steps, num_qubits, shots):
 
     probability_density_exp = []
     for output in exp_results.get_counts():
-        ps=[]
+        ps = []
         # Extract the probabilities
         keys = ['00001', '00010', '00100', '01000', '10000']
         for key in keys:
@@ -194,8 +194,64 @@ Below is the result for one of the simulations on the hardware.
 Comparing this with the result above from the simulator, despite the similarity, the effect of noise and decoherence (especially at later times) on a real quantum hardware is apparent!
 
 ## Anderson localization
+Finally, we are coming to Anderson localization. As mentioned before, Anderson localization always happens in 1-D systems when disorder is present. Lattice inhomogeneity causes scattering and leads to quantum interference that tends to inhibit particle propagation, a signature of localization. The wavefunction of a localized particle rapidly decays away from its initial position, effectively confining the particle to a small region of the lattice. This localization phenomenon is a direct consequence of interference between different paths arising from multiple scatterings of the electron by lattice defects. To study this phenomenon, we add back the inhomogeneous onsite potentials to the Hamiltonian, thereby making the lattice sites inequivalent, i.e.,
 
+$$
+H_\text{tb}/\hbar = J\sum_{i=0}^3(X_i X_{i+1} + Y_i Y_{i+1}) + \sum_{i=0}^3\epsilon_i Z_i.
+$$
 
+One simple way to model disorder within the tight-binding system is through the *Aubry-Andre (AA) model*, where the disorder is replaced by a periodic modulation of the on-site energies, with a spatial period incommensurate with the lattice period. The AA potential is modeled as \\(\epsilon_i = W\cos(2\pi\beta i)\\), where \\(\beta\\) determines the quasicrystal periodicity and \\(W\\) is the disorder strength. Moreover, with the addition of the onsite terms, we also need to modify the Trotterized circuit. Note that exponentiating the \\(Z_i\\) gates for the time-evolution unitary simply leads to \\(R_{Z_i}\\) gates acting on individual qubits. So we can define a `Trot_qc_disorder` circuit based on the `Trot_qc` circuit from [part 1](/blog/ibm-spring-challenge-1/):
+```python
+def U_trot_circuits_disorder(delta_t, trotter_steps, num_qubits, W, beta):
+    """
+    Record a list of Trotterized quantum circuits with disorder 
+    at all Trotter steps.
+
+    Args:
+        delta_t (float): Duration of individual time steps.
+        trotter_steps (array): Array of intermediate times.
+        num_qubits (int): The total number of qubits.
+        W (float): The disorder strength.
+        beta (float): The quasicrystal periodicity of the AA model.
+
+    Returns:
+        disorder_circuits (list): List of Trotterized quantum circuits with disorder.
+    """
+
+    t = Parameter('t')
+    deltas = [Parameter('delta_{:d}'.format(idx)) for idx in range(num_qubits)]
+
+    AA_pattern = np.cos(2*np.pi*beta*np.arange(num_qubits))
+    disorders = W * AA_pattern
+    disorder_circuits = []
+
+    for n_steps in trotter_steps:
+        qr = QuantumRegister(num_qubits)
+        cr = ClassicalRegister(num_qubits)
+        qc = QuantumCircuit(qr, cr)
+
+        qc.x(0)
+
+        for _ in range(n_steps):
+            qc.append(Trot_qc_disorder(num_qubits, t, deltas), qr)
+            
+        qc = qc.bind_parameters({t: delta_t})
+        qc = qc.bind_parameters({deltas[idx]: disorders[idx] for idx in range(num_qubits)})
+        disorder_circuits.append(qc)
+    return disorder_circuits
+```
+
+Like the previous case, we will simulate the particle propagation with disorder on a simulator. Here is how it looks like:
+
+<img src="probs_disorder.svg" width=60%/ class="center">
+
+Comparing with the quantum random walk result, it is clear that in the presence of the AA disorder, the particle tends to be localized in its initial position (qubit 0) as time evolves. So we successfully see the effect of Anderson localization in this 1-D system! Again, running the same simulation on a quantum computer we see a degradation in quality of the results due to noise, but we can still reach the same conclusion in this case:
+
+<img src="probs_disorder_exp.png" width=40%/ class="center">
+
+## Conclusion
+
+It's been a long post to get to this point, but just to conclude, we have successfully simulated the particle propagation in a 1-D quantum chain with and without disorder on both a simulator and a real quantum computer provided by IBM. In the case of no disorder, we saw behaviors of a quantum random walk, while is distinct from a classical random walk. In the presence of disorder, we saw the effect of Anderson localization, i.e., the particle tends to localize in its initial position over time. In the next and final post of this series, we will look into a more complex example of localization, that is, many-body localization. The question there is: *does localization still happen when we take into account particle interactions?* See you in the next one!
 
 ---
 

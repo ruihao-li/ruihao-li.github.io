@@ -81,12 +81,12 @@ We then define the `Trot_qc` function for the Trotterized quantum circuit.
 ```python
 def Trot_qc(num_qubits, t=Parameter("t")):
     """
-    Creates the Trotterized quantum circuit at a given time step
-    for a 1-D tight-binding model.
+    Creates the Trotterized quantum circuit at a given time for the 
+    1D tight-binding model.
 
     Args:
-        t (float): The Trotter parameter.
         num_qubits (int): The number of qubits in the circuit.
+        t (Parameter): time.
 
     Returns:
         qiskit.circuit.QuantumCircuit: The Trotterized quantum circuit.
@@ -140,7 +140,9 @@ Last but not least, to see if we have implemented Trotterization correctly, we m
 from qiskit.opflow import I, X, Y, Z
 
 def U_tb(t):
-    """Time-evolution unitary for 3 qubits."""
+    """
+    Exact time-evolution unitary for 3 qubits.
+    """
     # Interactions (I is the identity matrix; X and Y are Pauli matricies;
     # ^ is a tensor product)
     XXs = (I^X^X) + (X^X^I)

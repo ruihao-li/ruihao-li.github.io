@@ -6,7 +6,7 @@ tags: [quantum-computing]
 categories: [quantum-computing]
 ---
 
-A few weeks ago I participated in the [IBM Quantum Spring Challenge 2022](https://research.ibm.com/blog/quantum-spring-challenge-2022), which was a fun challenge to do because one of the topics covered is actually close to my heart, which is on quantum simulations of many-body systems in condensed matter physics. In these problems, we investigated a well-known phenomenon (to the condensed matter physics community, of course) called [Anderson localization](https://en.wikipedia.org/wiki/Anderson_localization) and one called [many-body localization](https://en.wikipedia.org/wiki/Many_body_localization), which I happened to gain some exposure to during the [MAGLAB Theory Winter School](https://nationalmaglab.org/news-events/events/for-scientists/winter-theory-school) earlier this year and is still an active topic of research. The majority of this Challenge was about introducing and reproducing some of the results from this nicely written [quantum transport paper](https://www.nature.com/articles/s41534-022-00528-0) by Karamlou et al. I will split the full discussion into three parts. This blog post will cover the first part, where we will set up the framework for investigating many-body physics on a quantum computer. This includes building the tight-binding model for a 1D quantum chain and using Trotterization for simulating dynamics of the quantum states.
+A few weeks ago I participated in the [IBM Quantum Spring Challenge 2022](https://research.ibm.com/blog/quantum-spring-challenge-2022), which was a fun challenge to do because one of the topics covered is actually close to my heart, which is on quantum simulations of many-body systems in condensed matter physics. In these problems, we investigated a well-known phenomenon (to the condensed matter physics community, of course) called [Anderson localization](https://en.wikipedia.org/wiki/Anderson_localization) and one called [many-body localization](https://en.wikipedia.org/wiki/Many_body_localization), which I happened to gain some exposure to during the [MAGLAB Theory Winter School](https://nationalmaglab.org/news-events/events/for-scientists/winter-theory-school) earlier this year and is still an active topic of research. The majority of this Challenge was about introducing and reproducing some of the results from this nicely written [quantum transport paper](https://www.nature.com/articles/s41534-022-00528-0) by Karamlou et al. I will split the full discussion into three parts. This blog post will cover the first part, where we will set up the framework for investigating many-body physics on a quantum computer. This includes building the tight-binding model for a 1-D quantum chain and using Trotterization for simulating dynamics of the quantum states.
 
 The other topic of the Quantum Challenge was quantum chemistry calculations with the variational quantum eigensolver (VQE), which I do not intend to discuss this time. Interested readers are encouraged to take a look at the original announcement linked above for more details. Here is the [official Github repository](https://github.com/qiskit-community/ibm-quantum-spring-challenge-2022) if you want to have a go at the challenge problems. Without further ado, let us begin our discussion.
 
@@ -19,7 +19,7 @@ The tight-binding model would be the building block for studying the many-body p
 H_\text{tb}/\hbar =  \sum_{i}\epsilon_{i} c_i^\dagger c_i + \sum_{\langle i,j\rangle}J_{ij}\left( c_i^\dagger c_j + \text{h.c.}\right),
 \end{equation}
 
-where \\(c_i^\dagger\\) and \\(c_i\\) are the creation and annihilation operators for the electron at site \\(i\\), respectively, \\(\mu_i\\) are the on-site potentials, and \\(J_{ij}\\) are elements of a symmetric matrix representing the hopping strengths. Moreover, \\(\langle i,j\rangle\\) denotes any two neighboring sites. To simulate this fermionic system on a gate-based quantum computer which is built on qubits, we need a similar notion for the ladder operators (i.e., creation and annihilation operators) for two-level systems: \\(c^\dagger \ket{0} \to \ket{1}\\) and \\(c\ket{1} \to \ket{0}\\). One way of representing them would be to use the Pauli gates:
+where \\(c_i^\dagger\\) and \\(c_i\\) are the creation and annihilation operators for the electron at site \\(i\\), respectively, \\(\mu_i\\) are the on-site potentials, and \\(J_{ij}\\) are the elements of a symmetric matrix representing the hopping strengths. Moreover, \\(\langle i,j\rangle\\) denotes any pair of neighboring sites. To simulate this fermionic system on a gate-based quantum computer which is built on qubits, we need a similar notion for the ladder operators (i.e., creation and annihilation operators) for two-level systems: \\(c^\dagger \ket{0} \to \ket{1}\\) and \\(c\ket{1} \to \ket{0}\\). One way of representing them would be to use the Pauli gates:
 
 $$
 \begin{split}
@@ -37,7 +37,7 @@ where we have neglected a constant term (proportional to the identity operator) 
 
 ## Trotterization
 
-One of the things we care about in quantum simulations is the time-evolution of the quantum system. This is determined by the unitary operator \\(e^{-iHt/\hbar}\\) in quantum mechanics, where \\(H\\) is the time-independent Hamiltonian, which is \\(H_\text{tb}\\) in the case of our 1D quantum chain. Now, to execute the time evolution unitary on a gate-based quantum computer, one must decompose it into a product of one- and two-qubit gates that can be implemented on the quantum computer. One method to accomplish this is called [Trotterization](https://qiskit.org/documentation/stubs/qiskit.synthesis.SuzukiTrotter.html), which essentially performs a discretized approximation to the continuous time evolution. To demonstrate it, let us consider a simple *three-site* system. The time-evolution unitary of this system is given by
+One of the things we care about in quantum simulations is the time-evolution of the quantum system. This is determined by the unitary operator \\(e^{-iHt/\hbar}\\) in quantum mechanics, where \\(H\\) is the time-independent Hamiltonian, which is \\(H_\text{tb}\\) in the case of our 1-D quantum chain. Now, to execute the time evolution unitary on a gate-based quantum computer, one must decompose it into a product of one- and two-qubit gates that can be implemented on the quantum computer. One method to accomplish this is called [Trotterization](https://qiskit.org/documentation/stubs/qiskit.synthesis.SuzukiTrotter.html), which essentially performs a discretized approximation to the continuous time evolution. To demonstrate it, let us consider a simple *three-site* system. The time-evolution unitary of this system is given by
 $$
 \begin{split}
 U_\text{tb}(t) &= \exp\left[\frac{-it}{\hbar}\left(H_\text{tb}^{(0,1)} + H_\text{tb}^{(1,2)}\right)\right] \\\\
@@ -82,7 +82,7 @@ We then define the `Trot_qc` function for the Trotterized quantum circuit.
 def Trot_qc(num_qubits, t=Parameter("t")):
     """
     Creates the Trotterized quantum circuit at a given time step
-    for a 1D tight-binding model.
+    for a 1-D tight-binding model.
 
     Args:
         t (float): The Trotter parameter.
@@ -155,7 +155,7 @@ On the other hand, the approximate unitary based on Trotterization is constructe
 def U_trot_tb(t_target, trotter_steps, num_qubits):
     """
     Creates the Trotterized time-evolution unitary for a 
-    1D tight-binding model.
+    1-D tight-binding model.
     
     Args:
         t_target (float): The total time evolved.
@@ -204,4 +204,4 @@ Here is how the plot looks like:
 
 Yay :tada:! The trotter error decreases as the number of Trotter steps increases, suggesting that we have indeed implemented Trotterization correctly.
 
-So here comes the end of the first part. In the next post, we will see how we can use the Trotterized quantum circuit that we just built to study phenomena including the quantum random walk and Anderson localization on a 1D quantum chain. Stay tuned!
+So here comes the end of the first part. In the next post, we will see how we can use the Trotterized quantum circuit that we just built to study phenomena including the quantum random walk and Anderson localization on a 1-D quantum chain. Stay tuned!

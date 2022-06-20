@@ -4,10 +4,13 @@ showAuthor: false
 showDate: false
 showReadingTime: false
 ---
+
 <figure>
-    <img src="/files/research_0622.svg" width=80%/ class="center">
+    <img src="research_0622.svg" width=80%/ class="center">
     <figcaption align="center"> Some Weyl cones and Feynman diagrams. </figcaption>
 </figure>
+
+
 
 ## Overview
 

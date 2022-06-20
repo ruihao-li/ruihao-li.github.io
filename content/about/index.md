@@ -3,8 +3,16 @@ title: "About"
 showAuthor: false
 showDate: false
 showReadingTime: false
+showTableOfContents: false
 ---
 
+{{< figure
+    src="disco_diffusion.png"
+    alt="AI generated artwork"
+    caption="AI generated art by [Disco Diffusion](https://github.com/alembics/disco-diffusion)."
+    default=false
+    class="center_scaled"
+    >}}
 
 <!-- ### Education
 

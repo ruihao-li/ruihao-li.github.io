@@ -2,8 +2,8 @@
 title: "Quantum simulation of many-body physics - II"
 date: 2022-06-18
 draft: false
-tags: []
-categories: [quantum-computing]
+tags: [quantum-computing, physics]
+categories: []
 ---
 
 As promised in the [previous blog post](/blog/ibm-spring-challenge-1/), we will now continue our journey into the world of many-body physics simulations with quantum computers. In this post, we want to address the question of how a particle such as an electron, propagates through an intrinsically quantum system, i.e., the 1-D quantum chain that we built previously. Remember everything we discussed so far has not taken into account *disorder* that is generally present in realistic condensed matter systems. Disorder is something that generically breaks some symmetries of the system Hamiltonian and/or leads to deviations from the lattice periodicity. When disorder is present, all the sites in a lattice are no longer equivalent. So another question naturally arises: how would disorder affect the quantum transport? The exploration of this general question has led to wonderful discoveries of various localization effects in disordered systems. Here we will touch on one of them, Anderson localization, which was first discovered by the great physicist [Philip W. Anderson](https://en.wikipedia.org/wiki/Philip_W._Anderson) in 1958 [1]. One interesting thing to note is that the dimensionality of a system has a direct impact on Anderson localization. For example, according to the scaling theory of localization [2], in 1- and 2-D, a system will be a perfect insulator in the thermodynamic limit (simply put, when the system size is taken to infinity). Therefore, Anderson localization must happen in one- and two-dimensional disordered systems regardless of the disorder strength! However, in 3-D, Anderson localization is a critical phenomenon where the system undergoes a [metal-insulator transition (MIT)](https://en.wikipedia.org/wiki/Metal%E2%80%93insulator_transition). This means that localization happens only when the disorder strength exceeds a certain threshold. Even though this is certainly one of the most interesting aspects of Anderson localization, we will not explore it here for the sake of simplicity. We will again stick to the 1-D system as in the previous post.
@@ -255,7 +255,7 @@ It's been a long post to get to this point, but just to conclude, we have succes
 
 ---
 
-### References:
+## References
 
 [1] [P. W. Anderson, Absence of Diffusion in Certain Random Lattices. Phys. Rev. 109, 1492 (1958).](https://journals.aps.org/pr/abstract/10.1103/PhysRev.109.1492)
 

@@ -2,8 +2,8 @@
 title: "Quantum simulation of many-body physics - I"
 date: 2022-06-04
 draft: false
-tags: [quantum-computing]
-categories: [quantum-computing]
+tags: [quantum-computing, physics]
+categories: []
 ---
 
 A few weeks ago I participated in the [IBM Quantum Spring Challenge 2022](https://research.ibm.com/blog/quantum-spring-challenge-2022), which was a fun challenge to do because one of the topics covered is actually close to my heart, which is on quantum simulations of many-body systems in condensed matter physics. In these problems, we investigated a well-known phenomenon (to the condensed matter physics community, of course) called [Anderson localization](https://en.wikipedia.org/wiki/Anderson_localization) and one called [many-body localization](https://en.wikipedia.org/wiki/Many_body_localization), which I happened to gain some exposure to during the [MAGLAB Theory Winter School](https://nationalmaglab.org/news-events/events/for-scientists/winter-theory-school) earlier this year and is still an active topic of research. The majority of this Challenge was about introducing and reproducing some of the results from this nicely written [quantum transport paper](https://www.nature.com/articles/s41534-022-00528-0) by Karamlou et al. I will split the full discussion into three parts. This blog post will cover the first part, where we will set up the framework for investigating many-body physics on a quantum computer. This includes building the tight-binding model for a 1-D quantum chain and using Trotterization for simulating dynamics of the quantum states.

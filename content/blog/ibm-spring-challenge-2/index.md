@@ -201,6 +201,7 @@ H_\text{tb}/\hbar = J\sum_{i=0}^3(X_i X_{i+1} + Y_i Y_{i+1}) + \sum_{i=0}^3\epsi
 $$
 
 One simple way to model disorder within the tight-binding system is through the *Aubry-Andre (AA) model*, where the disorder is replaced by a periodic modulation of the on-site energies, with a spatial period incommensurate with the lattice period. The AA potential is modeled as \\(\epsilon_i = W\cos(2\pi\beta i)\\), where \\(\beta\\) determines the quasicrystal periodicity and \\(W\\) is the disorder strength. Moreover, with the addition of the on-site terms, we also need to modify the Trotterized circuit. Note that exponentiating the \\(Z_i\\) gates for the time-evolution unitary simply leads to \\(R_{Z_i}\\) gates acting on individual qubits. So we can define a `Trot_qc_disorder` circuit based on the `Trot_qc` circuit from [part 1](/blog/ibm-spring-challenge-1/):
+
 ```python
 def U_trot_circuits_disorder(delta_t, trotter_steps, num_qubits, W, beta):
     """
@@ -257,10 +258,10 @@ It's been a long post to get to this point, but just to conclude, we have succes
 
 ## References
 
-[1] [P. W. Anderson, Absence of Diffusion in Certain Random Lattices. Phys. Rev. 109, 1492 (1958).](https://journals.aps.org/pr/abstract/10.1103/PhysRev.109.1492)
+1. [P. W. Anderson, Absence of Diffusion in Certain Random Lattices. *Phys. Rev.* 109, 1492 (1958).](https://journals.aps.org/pr/abstract/10.1103/PhysRev.109.1492)
 
-[2] [E. Abrahams, P. W. Anderson, D. C. Licciardello, and T. V. Ramakrishnan, Scaling Theory of Localization: Absence of Quantum Diffusion in Two Dimensions. Phys. Rev. Lett. 42, 673 (1979).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.42.673)
+2. [E. Abrahams, P. W. Anderson, D. C. Licciardello, and T. V. Ramakrishnan, Scaling Theory of Localization: Absence of Quantum Diffusion in Two Dimensions. *Phys. Rev. Lett.* 42, 673 (1979).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.42.673)
 
-[3] [K. Manouchehri and J. B. Wang, Solid State Implementation of Quantum Random Walks on General Graphs. AIP Conf. Proc. 1074, 56 (2008).](https://aip.scitation.org/doi/abs/10.1063/1.3037138)
+3. [K. Manouchehri and J. B. Wang, Solid State Implementation of Quantum Random Walks on General Graphs. *AIP Conf. Proc.* 1074, 56 (2008).](https://aip.scitation.org/doi/abs/10.1063/1.3037138)
 
-[4] [J.Kempe, Quantum random walks - an introductory overview. arXiv:quant-ph/0303081 (2003).](https://arxiv.org/abs/quant-ph/0303081)
+4. [J.Kempe, Quantum random walks - an introductory overview. arXiv:quant-ph/0303081 (2003).](https://arxiv.org/abs/quant-ph/0303081)

@@ -203,6 +203,32 @@ $$
 One simple way to model disorder within the tight-binding system is through the *Aubry-Andre (AA) model*, where the disorder is replaced by a periodic modulation of the on-site energies, with a spatial period incommensurate with the lattice period. The AA potential is modeled as \\(\epsilon_i = W\cos(2\pi\beta i)\\), where \\(\beta\\) determines the quasicrystal periodicity and \\(W\\) is the disorder strength. Moreover, with the addition of the on-site terms, we also need to modify the Trotterized circuit. Note that exponentiating the \\(Z_i\\) gates for the time-evolution unitary simply leads to \\(R_{Z_i}\\) gates acting on individual qubits. So we can define a `Trot_qc_disorder` circuit based on the `Trot_qc` circuit from [part 1](/blog/ibm-spring-challenge-1/):
 
 ```python
+def Trot_qc_disorder(num_qubits, t, deltas):
+    """
+    Generate a Trotterized quantum circuit with disorder.  
+
+    Args:
+        num_qubits (int): The total number of qubits.
+        t (Parameter): The time parameter.
+        deltas (list(Parameter)): The list of disorder parameters.
+    
+    Returns:
+        qiskit.QuantumCircuit: The Trotterized quantum circuit with disorder.
+    """
+
+    Trot_qr_disorder = QuantumRegister(num_qubits)
+    Trot_qc_disorder = QuantumCircuit(Trot_qr_disorder, name='Trot disorder')
+
+    Trot_gate = Trot_qc(num_qubits, t).to_instruction()
+    Trot_qc_disorder.append(Trot_gate, Trot_qr_disorder)
+    for i in range(num_qubits):
+        Trot_qc_disorder.rz(2 * deltas[i] * t, i)
+    return Trot_qc_disorder
+```
+
+Let us then define a function that records the Trotterized circuits with finite disorder at all Trotter (time) steps:
+
+```python
 def U_trot_circuits_disorder(delta_t, trotter_steps, num_qubits, W, beta):
     """
     Record a list of Trotterized quantum circuits with disorder 

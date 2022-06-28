@@ -33,7 +33,7 @@ Plugging them into Eq. (1) and assuming the hoppings are homogeneous such that t
 \begin{equation}
 H_\text{tb}/\hbar = \sum_i \epsilon_i Z_i + J\sum_{\langle i,j\rangle}(X_i X_j + Y_i Y_j),
 \end{equation}
-where we have neglected a constant term (proportional to the identity operator) that would not have any impact on the dynamics of the system.
+where we have neglected a constant term (proportional to the identity operator) that would not have any impact on the dynamics of the system. Note that we have technically performed the inverse of the [Jordan-Wigner transformation](https://en.wikipedia.org/wiki/Jordan%E2%80%93Wigner_transformation).
 
 ## Trotterization
 
@@ -52,11 +52,11 @@ U_\text{tb}(t) &\approx \left\\{\exp\left[\frac{-it}{n} \left(X_0 X_1 + Y_0 Y_1 
 &= \left[R_{X_0X_1}\left(\frac{2t}{n} \right) R_{Y_0Y_1}\left(\frac{2t}{n} \right) R_{X_1X_2}\left(\frac{2t}{n} \right) R_{Y_1Y_2}\left(\frac{2t}{n} \right) \right]^n,
 \end{split}
 $$
-where \\(R_{X_iX_j}\\) and \\(R_{Y_iY_j}\\) are parametric two-qubit \\(X\otimes X\\) and \\(Y\otimes Y\\) interaction gates between qubits \\(i\\) and \\(j\\). They are sometimes referred to as the Ising gates. Please see [RXXGate](https://qiskit.org/documentation/stubs/qiskit.circuit.library.RXXGate.html) and [RYYGate](https://qiskit.org/documentation/stubs/qiskit.circuit.library.RYYGate.html) for more details. In general, for an \\(n\\)-qubit system, the time-evolution unitary can be written as
+where \\(R_{X_iX_j}\\) and \\(R_{Y_iY_j}\\) are parametric two-qubit \\(X\otimes X\\) and \\(Y\otimes Y\\) interaction gates between qubits \\(i\\) and \\(j\\). They are sometimes referred to as the Ising gates. Please see [RXXGate](https://qiskit.org/documentation/stubs/qiskit.circuit.library.RXXGate.html) and [RYYGate](https://qiskit.org/documentation/stubs/qiskit.circuit.library.RYYGate.html) for more details. In general, for an \\(m\\)-qubit system, the time-evolution unitary for each individual Trotter step can then be written as
 $$
-U_\text{tb}(\Delta t) \approx \prod_{j\in\text{odd}} R_{X_j X_{j+1}}(2\Delta t) R_{Y_j Y_{j+1}}(2\Delta t) \prod_{k\in\text{even}} R_{X_k X_{k+1}}(2\Delta t) R_{Y_k Y_{k+1}}(2\Delta t),
+U_\text{tb}(\Delta t) \approx \prod_{i=0}^{m-2} R_{X_i X_{i+1}}(2\Delta t) R_{Y_i Y_{i+1}}(2\Delta t),
 $$
-where \\(\Delta t = t/n\\) is the discretized time step.
+where \\(\Delta t = t/n\\) is the discretized time step. The complete evolution over time \\(t\\) is then \\(U_\text{tb}\approx [U_\text{tb}(\Delta t)]^{t/\Delta t}\\).
 
 We are now just one step shy of implementing \\(U_\text{tb}(t)\\) on a quantum computer, that is, to further decompose the \\(R_{XX}\\) and \\(R_{YY}\\) gates into a set of gates that are native to the quantum hardware, such as the CNOT gate and single-qubit rotation gates. For this, let us introduce another Ising gate, [RZZGate](https://qiskit.org/documentation/stubs/qiskit.circuit.library.RZZGate.html) \\(R_{ZZ}\\). It is not hard to verify that this two-qubit gate can be decomposed as a single-qubit rotation gate \\(R_Z = \exp(-i\theta Z/2)\\) sandwiched between two CNOT gates. Specifically, \\(R_{ZZ}(\theta) = \text{CNOT}\\, R_Z(\theta)\\, \text{CNOT}\\). Then by working out the explicit matrix representations, one can show that the \\(R_{XX}\\) gate has the following decomposition,
 

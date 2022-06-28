@@ -37,7 +37,7 @@ Since late 2021, I have become more serious about one of my other passions, quan
 - I have become [Qiskit-certified](https://www.credly.com/badges/d8b2f9bb-6e08-410c-89e2-cf98be2cbdd3?source=linked_in_profile)!
 - I completed all the coding challenges in [QHack 2022](/files/QHack_Coding_Challenge_Certificate.pdf) hosted by Xanadu.
 - I took part in the 24-hour [QC Hack 2022](/files/QCHack2022_Certificate.pdf) Hackathon and together with four other teammates, we built a prototype of the quantum snakes-and-ladders game and won one of the [Honorable Mentions](https://www.quantumcoalition.io/winners-2022) in the IBM Quantum Challenge.
-- I completed the [IBM Quantum Spring Challenge 2022](https://www.credly.com/badges/717d9647-4f1e-46c7-8972-79153902efc6?source=linked_in_profile), which I wrote a blog post about [here](/blog/ibm-spring-challenge-1/).
+- I completed the [IBM Quantum Spring Challenge 2022](https://www.credly.com/badges/717d9647-4f1e-46c7-8972-79153902efc6?source=linked_in_profile), which I wrote a series of blog posts about. See: [part I](/blog/ibm-spring-challenge-1/), [part II](/blog/ibm-spring-challenge-2/), and [part III](/blog/ibm-spring-challenge-3/).
 - I was selected as one of the mentees for the [Quantum Open Source Foundation (QOSF) Mentorship Program](https://qosf.org/qc_mentorship/) in March 2022.
 - I am now working as a Quantum Algorithms Research Intern at [Agnostiq](https://agnostiq.ai/).
 

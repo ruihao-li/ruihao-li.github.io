@@ -284,10 +284,10 @@ It's been a long post to get to this point, but just to conclude, we have succes
 
 ## References
 
-[1] [P. W. Anderson, Absence of Diffusion in Certain Random Lattices. Phys. Rev. 109, 1492 (1958).](https://journals.aps.org/pr/abstract/10.1103/PhysRev.109.1492)
+1. [P. W. Anderson, Absence of Diffusion in Certain Random Lattices. *Phys. Rev.* 109, 1492 (1958).](https://journals.aps.org/pr/abstract/10.1103/PhysRev.109.1492)
 
-[2] [E. Abrahams, P. W. Anderson, D. C. Licciardello, and T. V. Ramakrishnan, Scaling Theory of Localization: Absence of Quantum Diffusion in Two Dimensions. Phys. Rev. Lett. 42, 673 (1979).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.42.673)
+2. [E. Abrahams, P. W. Anderson, D. C. Licciardello, and T. V. Ramakrishnan, Scaling Theory of Localization: Absence of Quantum Diffusion in Two Dimensions. *Phys. Rev. Lett.* 42, 673 (1979).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.42.673)
 
-[3] [K. Manouchehri and J. B. Wang, Solid State Implementation of Quantum Random Walks on General Graphs. AIP Conf. Proc. 1074, 56 (2008).](https://aip.scitation.org/doi/abs/10.1063/1.3037138)
+3. [K. Manouchehri and J. B. Wang, Solid State Implementation of Quantum Random Walks on General Graphs. *AIP Conf. Proc.* 1074, 56 (2008).](https://aip.scitation.org/doi/abs/10.1063/1.3037138)
 
-[4] [J.Kempe, Quantum random walks - an introductory overview. arXiv:quant-ph/0303081 (2003).](https://arxiv.org/abs/quant-ph/0303081)
+4. [J.Kempe, Quantum random walks - an introductory overview. arXiv:quant-ph/0303081 (2003).](https://arxiv.org/abs/quant-ph/0303081)

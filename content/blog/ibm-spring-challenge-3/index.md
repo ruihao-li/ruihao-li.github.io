@@ -48,13 +48,13 @@ After a fairly long digression, rather than diving further into the glory detail
 
 ## The Heisenberg model
 
-Following the history of this subject, the introduction of the fermionic and spin-chain lattice models has definitely opened the door to studying many interesting properties of MBL in (classical) numerical simulations. This is exactly the setup we have built up in the previous parts of the challenge. Here we will do something different from the setup in the original IBM Challenge Problem 3. On top of the tight-binding model used to study Anderson localization in [part II](/blog/ibm-spring-challenge-2/), we will add an additional \\(ZZ\\)-interaction term. So the tight-binding Hamiltonian is given by
+Following the history of this subject, the introduction of the fermionic and spin-chain lattice models has definitely opened the door to studying many interesting properties of MBL in (classical) numerical simulations. This is exactly the system we have built up in the previous parts of the Challenge. Here we will do something different from the setup in the original IBM Challenge Problem 3. On top of the tight-binding model used to study Anderson localization in [part II](/blog/ibm-spring-challenge-2/), we will add an additional \\(ZZ\\)-interaction term. So the tight-binding Hamiltonian is given by
 
-$$
-H_\text{tb}/\hbar = J\sum_{i=0}^{n-2} (X_i X_{i+1} + Y_i Y_{i+1}) + U \sum_{i=0}^{n-2} Z_i Z_{i+1} +\sum_{i=0}^{n-2}\epsilon_i Z_i,
-$$
+\begin{equation}
+H_\text{tb}/\hbar = J\sum_{i=0}^{n-2} (X_i X_{i+1} + Y_i Y_{i+1}) + U \sum_{i=0}^{n-2} Z_i Z_{i+1} +\sum_{i=0}^{n-2}\epsilon_i Z_i,\quad
+\end{equation}
 
-where \\(n\\) is the number of sites in the 1-D chain. Readers with a condensed matter physics background may recognize that this is exactly the so-called [Heisenberg XXZ model](https://en.wikipedia.org/wiki/Quantum_Heisenberg_model). In fact, the Heisenberg model has become the paradigmatic model for studying MBL physics. The reason for the additional term should be obvious by doing the [Jordan-Wigner transformation](https://en.wikipedia.org/wiki/Jordan%E2%80%93Wigner_transformation), which maps the spin-chain Hamiltonian above to a spinless fermionic chain in the second-quantization form given by
+where \\(n\\) is the number of sites in the 1-D chain. Readers with a condensed matter physics background may recognize that this is exactly the so-called [Heisenberg XXZ model](https://en.wikipedia.org/wiki/Quantum_Heisenberg_model). In fact, the Heisenberg model has become the paradigmatic model for studying MBL physics (among many other phenomena). The reason for the additional term should be obvious by doing the [Jordan-Wigner transformation](https://en.wikipedia.org/wiki/Jordan%E2%80%93Wigner_transformation), which maps the spin-chain Hamiltonian above to a spinless fermionic chain in the second-quantization form given by
 
 $$
 H_\text{tb}/\hbar = J\sum_{i=0}^{n-2} (c_i^\dag c_{i+1} + \text{h.c.}) + U \sum_{i=0}^{n-2} n_i n_{i+1} + \sum_{i=0}^{n-2} \epsilon_i n_i,
@@ -62,15 +62,278 @@ $$
 
 where \\(n_i \equiv c_i^\dag c_i\\) is the density operator for site \\(i\\). Hence, we see that the additional \\(U\\)-term gives rise to the two-body interaction between neighboring sites. Without it, the tight-binding model is a free-fermion model, which is suited for the study of Anderson localization but not many-body localization. So here we will simulate the MBL phase in a disordered Heisenberg XXZ spin chain. We will again set \\(J = 1\\) and the model thus has two free parameters: the *interaction strength* \\(U\\) and the *disorder strength* \\(W\\). Recall that \\(W\\) controls the onsite potentials through the Aubry-Andre model, \\(\epsilon_i = W\cos(2\pi\beta i)\\), with \\(\beta\\) being related to the quasicrystal periodicity. 
 
-One interesting aspect of the 1-D Heisenberg XXZ model is its phase diagram. In the limit \\(U\to 0\\) with some finite \\(W\\), i.e., when there is no interaction, this model is equivalent to free fermions moving in a disordered potential and therefore, the states are Anderson localized. Turning on the interaction will result in the MBL phase. Furthermore, for fixed and not very strong disorder (\\(W/U \sim 1\\)), it was found that tuning the interaction strength \\(U\\) above some critical value \\(U^\ast\\) will lead to delocalization. On the other hand, if we fix \\(U\\) and increase the disorder strength \\(W\\), we will see a transition from a delocalized (thermal) phase to the MBL phase when the \\(W\\) goes above a critical value \\(W^\ast\\). Therefore, in 1-D interacting systems there exists a metal-insulator transition, which is distinct from non-interacting systems that always Anderson localize in the thermodynamic limit, as mentioned in the [previous post](/blog/ibm-spring-challenge-2). A schematic illustrating the phase diagram of the XXZ spin chain is shown below.
+One interesting aspect of the 1-D Heisenberg XXZ model is its phase diagram. In the limit \\(U\to 0\\) with some finite \\(W\\), i.e., when there is no interaction, this model is equivalent to free fermions moving in a disordered potential and therefore, the states are Anderson localized. Turning on the interaction will result in the MBL phase. Furthermore, for fixed and not very strong disorder (\\(W/U \sim 1\\)), it was found that tuning the interaction strength \\(U\\) above some critical value \\(U^\ast\\) will lead to delocalization. On the other hand, if we fix \\(U\\) and increase the disorder strength \\(W\\), we will see a transition from a delocalized (thermal) phase to the MBL phase when \\(W\\) goes above a critical value \\(W^\ast\\). Therefore, in 1-D interacting systems there exists a metal-insulator transition, which is distinct from non-interacting systems that always Anderson localize in the thermodynamic limit, as mentioned in the [previous post](/blog/ibm-spring-challenge-2). A schematic illustrating the phase diagram of the XXZ spin chain is shown below.
 
 <figure>
-    <img src="XXZ_phase.png" width=80%/ class="center">
+    <img src="XXZ_phase.png" width=70%/ class="center">
     <figcaption align="center"> Phase diagram of Heisenberg XXZ spin chain as a function of interaction (top) and disorder strength (bottom). Here <i>J<sub>z</sub></i> denotes the interaction strength, equivalent to <i>U</i> in our formalism. Figure taken from Ref. [1]. </figcaption>
 </figure>
 
-## Imbalance and entanglement entropy
+## Putting things into action
 
+Okay, enough theory. Let's actually build the quantum circuit for the Heisenberg model and simulate its dynamics. In this case, we will simulate three particles in a 12-site spin chain, where particle excitations are represented by \\(\ket{1}\\) and empty sites represented by \\(\ket{0}\\). Like before, to better visualize (de)localization, we would like to track the probability of each site being in the \\(\ket{1}\\) state over the course of the entire Trotterized time evolution. In addition, we also keep track of two other quantities. One is the *imbalance*, which is one of the signatures of the breakdown of thermalization. The system imbalance is defined as 
+
+$$
+\mathcal I = \Bigg\langle \frac{N_e - N_o}{N_e + N_o} \Bigg\rangle,
+$$
+
+where \\(N_e\\) and \\(N_o\\) are the populations at the even and odd sites of the system, respectively, and the expectation value is defined with respect to a particular quantum state, i.e. \\(\langle \cdots \rangle = \langle \psi \lvert \cdots \rvert \psi \rangle\\). In a thermalized system, we expect each site of the lattice to be occupied by the same average number of particles after reaching steady state. Therefore, the imbalance is close to zero. However, when localization happens, we should expect a deviation from zero. Here we define a function that calculates the imbalance for a given state:
+
+```python
+def get_imbalance(state):
+    """
+    Calculate the imbalance of a state.
+    
+    Args:
+        state (qiskit.quantum_info.Statevector): The state vector.
+
+    Returns:
+        imbalance_val (float): The imbalance of the state.
+    """
+    imbalance_val = 0
+    state_dict = state.to_dict()
+    
+    for basis, amp in state_dict.items():
+        Ne, No = 0, 0
+        # Make sure to skip calculating the |00...0> state
+        for i in range(len(basis)):
+            if i % 2 == 0 and basis[i] == '1':
+                Ne += 1
+            elif i % 2 == 1 and basis[i] == '1':
+                No += 1
+        if Ne + No != 0:
+            imbalance_val += np.abs(amp)**2 * (Ne - No) / (Ne + No)
+    return imbalance_val
+```
+
+The other quantity to probe is the entanglement entropy formed in the lattice as a result of particle propagation. One can imagine that while the created particle excitations are initially separable from the the rest of the lattice, their propagation will lead to the creation and distribution of entanglement throughout the lattice. For simplicity, we will only keep track of the entanglement entropy of part of the system, say the first lattice site. This can be quantified by its von Neumann entropy, which is defined as
+
+$$
+\mathcal S_\text{vn}(\rho_A) = -\text{tr}(\rho_A \ln\rho_A),
+$$
+
+where \\(A\\) refers to the subsystem of interest (i.e., the first lattice site), and \\(\rho_A = \text{tr}_{B}\rho\\) is the reduced density matrix of the subsystem \\(A\\) after "tracing out" the rest of the system which we call \\(B\\). If the subsytem \\(A\\) is fully entangled with the rest of the system, \\(\mathcal S _\text{vn}(\rho_A) = \ln 2\\), whereas if the subsytem is completely separable with respect to the rest, \\(\mathcal S _\text{vn}(\rho_A) = 0\\). One can probe entanglement at a larger scale by using more sophisticated measures such as the concurrences and global entanglement, but we will not pursue these here.
+
+Let us now get straight into the simulation. Some necessary imports here: 
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from qiskit import QuantumCircuit, QuantumRegister, transpile, Aer
+from qiskit.circuit import Parameter, Instruction
+import qiskit.quantum_info as qi
+from tqdm.notebook import tqdm
+```
+
+Similar to what was done in [part I](/blog/ibm-spring-challenge-1), we will first define the Trotterized quantum circuit for MBL based on the tight-binding Hamiltonian Eq. (1) above.
+
+```python
+def Trot_qc_mbl(num_qubits, t, J, deltas):
+    """
+    Creates the Trotterized quantum circuit at a given time for 
+    the 1-D Heisenberg XXZ model.
+
+    Args:
+        num_qubits (int): The number of qubits in the circuit.
+        t (Parameter): time.
+        J (Parameter): The interaction strength.
+        deltas (List[Parameter]): The list of the disorder 
+        parameters.
+
+    Returns:
+        qiskit.circuit.QuantumCircuit: The Trotterized 
+        quantum circuit.
+    """
+
+    def ZZ_gate(J, t):
+        ZZ_qr = QuantumRegister(2)
+        ZZ_qc = QuantumCircuit(ZZ_qr, name='ZZ')
+        ZZ_qc.cnot(0,1)
+        ZZ_qc.rz(2 * J * t, 1)
+        ZZ_qc.cnot(0,1)
+        # Convert custom quantum circuit into a gate
+        ZZ = ZZ_qc.to_instruction()
+        return ZZ
+
+    def XX_gate(t):
+        XX_qr = QuantumRegister(2)
+        XX_qc = QuantumCircuit(XX_qr, name='XX')
+        XX_qc.ry(np.pi/2, [0,1])
+        XX_qc.append(ZZ_gate(1, t), [0,1])
+        XX_qc.ry(-np.pi/2, [0,1])
+        XX = XX_qc.to_instruction()
+        return XX
+
+    def YY_gate(t):
+        YY_qr = QuantumRegister(2)
+        YY_qc = QuantumCircuit(YY_qr, name='YY')
+        YY_qc.rx(-np.pi/2, [0,1])
+        YY_qc.append(ZZ_gate(1, t), [0,1])
+        YY_qc.rx(np.pi/2, [0,1])
+        YY = YY_qc.to_instruction()
+        return YY
+    
+    Trot_qr = QuantumRegister(num_qubits)
+    qc = QuantumCircuit(Trot_qr, name='Trot')
+
+    for i in range(num_qubits - 1):
+        qc.append(XX_gate(t), [Trot_qr[i], Trot_qr[i+1]])
+        qc.append(YY_gate(t), [Trot_qr[i], Trot_qr[i+1]])
+        qc.append(ZZ_gate(J, t), [Trot_qr[i], Trot_qr[i+1]])
+    
+    for i in range(num_qubits):
+        qc.rz(2 * deltas[i] * t, i)
+        
+    return qc
+```
+
+Next we define the function that records the Trotterized circuits at all time steps. Note that we will start with 3 particle excitations at sties 0, 4, and 8.
+
+```python
+def U_trot_circuits_mbl(delta_t, trotter_steps, num_qubits, U, W, beta):
+    """
+    Record a list of Trotterized quantum circuits for many body localization 
+    at all Trotter steps.
+
+    Args:
+        delta_t (float): Duration of individual time steps.
+        trotter_steps (array): Array of intermediate times.
+        num_qubits (int): The total number of qubits.
+        U (float): The interaction strength.
+        W (float): The disorder strength.
+        beta (float): The quasicrystal periodicity of the AA model.
+
+    Returns:
+        disorder_circuits (list): List of Trotterized quantum 
+        circuits for MBL.
+    """
+
+    t = Parameter('t')
+    J = Parameter('J')
+    deltas = [Parameter('delta_{:d}'.format(idx)) for idx in range(num_qubits)]
+
+
+    AA_pattern = np.cos(2*np.pi*beta*np.arange(num_qubits))
+    disorders = W * AA_pattern
+    mbl_circuits = []
+
+    for n_steps in trotter_steps:
+        qr = QuantumRegister(num_qubits)
+        cr = ClassicalRegister(num_qubits)
+        qc = QuantumCircuit(qr, cr)
+
+        qc.x([0, 4, 8])  # three particle excitations
+
+        for _ in range(n_steps):
+            qc.append(Trot_qc_mbl(num_qubits, t, J, deltas), qr)
+            
+        qc = qc.bind_parameters({t: delta_t})
+        qc = qc.bind_parameters({deltas[idx]: disorders[idx] for idx in range(num_qubits)})
+        qc = qc.bind_parameters({J: U})
+        mbl_circuits.append(qc)
+    return mbl_circuits
+```
+
+We first fix the value of the interaction strength \\(U = 1.0\\) and simulate the system at four different values of disorder strength \\(W = [0.2,\ 2,\ 4,\ 8]\\).
+
+```python
+delta_t = 0.15
+trotter_steps = np.arange(1, 25, 1) 
+num_qubits = 12
+U = 1.0
+beta = (np.sqrt(5)-1)/2
+
+circuits = {}
+Ws = [0.2, 2, 4, 8]
+
+for W in Ws:
+    circuits[W] = U_trot_circuits_mbl(
+        delta_t=delta_t, 
+        trotter_steps=trotter_steps, 
+        num_qubits=num_qubits, 
+        U=U, 
+        W=W, 
+        beta=beta
+    )
+```
+
+We can then simulate these Trotterized circuits on Qiskit's `statevector_simulator` backend and track the time evolution of the probability of finding a particle for all the lattice sites, the imbalance of the system, and the von Neumann entropy of the first site:
+
+```python
+backend_sim = Aer.get_backend('statevector_simulator')
+
+probability_densities = {}
+state_vector_imbalances = {}
+vn_entropies = {}
+
+for W in tqdm(Ws):
+    probability_densities[W] = []
+    state_vector_imbalances[W] = []
+    vn_entropies[W] = []
+    
+    for circ in circuits[W]:
+
+        transpiled_circ = transpile(circ, backend_sim, optimization_level=3)
+        job_sim = backend_sim.run(transpiled_circ)
+        # Grab the results from the job.
+        result_sim = job_sim.result()
+        outputstate = result_sim.get_statevector(transpiled_circ, decimals=6)
+
+        # extract the probability densities
+        ps = []
+        for idx in range(num_qubits):
+            ps.append(np.abs(qi.partial_trace(outputstate, [i for i in range(num_qubits) if i!=idx]))[1,1]**2)
+        
+        # extract the density matrix of qubit 0 by tracing out all other qubits
+        entropy = 0
+        rho_0 = qi.partial_trace(outputstate, range(1, num_qubits))
+        entropy += qi.entropy(rho_0, base=np.exp(1))
+        
+        # calculate the imbalance of the system
+        imbalance = 0        
+        imbalance += get_imbalance(outputstate)
+        
+        vn_entropies[W].append(entropy)
+        probability_densities[W].append(ps)
+        state_vector_imbalances[W].append(imbalance)
+```
+
+Below we show the results of this simulation. First is the probability densities at different disorder strengths.
+
+<img src="mbl_probs_W.svg" width=90%/ class="center">
+
+We see that with weak disorder the system is delocalized but as \\(W\\) increases, MBL kicks in and the particles are localized around their initial positions over time. Next we look at the imbalance as a function of time.
+
+<img src="mbl_imbal_W.svg" width=70%/ class="center">
+
+Again, as expected, when \\(W\\) is small, the system tends to thermalize and the average imbalance is close to 0. But at strong disorder, we see a large deviation from 0, indicated by the green and red curves in the plot. Finally, here is the result of the von Neumann entropy.
+
+<img src="mbl_entropy_W.svg" width=70%/ class="center">
+
+We see the average entanglement entropy over time decreases as the disorder strength increases since the system is transitioning into the MBL phase.
+
+As the final simulation, we will fix the disorder strength \\(W = 3.5\\) and vary the interaction strength \\(U = [0.2,\ 1,\ 3,\ 5]\\) to see how the behavior of the system changes. The execution is similar to the one above, so I won't bore you with basically the same codes again. Let us directly look at the results.
+
+<figure>
+    <img src="mbl_probs_U.svg" width=90%/ class="center">
+    <figcaption align="center"> Probability densities at different interaction strengths. </figcaption>
+</figure>
+
+<figure>
+    <img src="mbl_imbal_U.svg" width=70%/ class="center">
+    <figcaption align="center"> Evolution of the imbalance at different interaction strengths. </figcaption>
+</figure>
+
+<figure>
+    <img src="mbl_entropy_U.svg" width=70%/ class="center">
+    <figcaption align="center"> Evolution of the von Neumann entropy of site 0 at different interaction strengths. </figcaption>
+</figure>
+
+Based on the phase diagram discussed in the previous section, we expect that the system will transition from MBL to delocalization as \\(U\\) increases, when the disorder is not very strong. This can be observed in the probability densities, where the sign of delocalization can be seen starting from \\(U = 3\\), especially on the first qubit. This is also supported by considering the average imbalance and entanglement entropy at different interaction strengths. Although it is not as clear as the previous case with a fixed \\(U\\) and varying \\(W\\), we can still see that overall the magnitude of imbalance is smaller when the system becomes delocalized (i.e., with larger \\(U\\)), while the entanglement entropy gets larger. These simulation results agree with the theoretical expectations.
+
+## Conclusion
+
+Here we conclude the quantum simulations of many-body localization as well as the blogging about the IBM Quantum Spring Challenge 2022 as a whole. We have explored parts of the phase diagram of a 1-D disordered Heisenberg XXZ chain. We saw the somewhat competing effect between particle interaction and disorder, leading to transition between thermal and MBL phases. Our quantum simulations have successfully captured some of the key features of this phase diagram. The simulations showcased here barely scratch the surface of the fascinating physics of MBL and there are still many open problems to be explored. With that, I want to thank you for taking the time to follow along and I hope you enjoyed this journey into quantum simulations of many-body physics as much as I did!
 
 ## References
 

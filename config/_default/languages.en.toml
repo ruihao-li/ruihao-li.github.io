@@ -5,7 +5,7 @@ isoCode = "en"
 weight = 1
 rtl = false
 
-title = "Ruihao Li"
+title = "Home"
 # logo = "img/profile.png"
 # description = "My personal website"
 # copyright = "Copy, _right?_ :thinking_face:"
@@ -16,7 +16,7 @@ copyright = "© 2022 Ruihao Li"
 [author]
   name = "Ruihao Li"
   image = "img/profile.jpeg"
-  headline = "Physics PhD candidate at Case Western Reserve University"
+  headline = "Theoretical Condensed Matter Physics"
   # bio = "A little bit about you"
   links = [
     { linkedin = 'https://www.linkedin.com/in/rui-hao-li/' },

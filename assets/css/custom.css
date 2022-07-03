@@ -17,3 +17,9 @@ html {
   margin-right: auto;
   width: 90%;
 }
+
+#comment {
+  width: 60%;
+  margin-right: 10pt;
+  margin-top: 20pt;
+}

@@ -3,13 +3,15 @@ description: Personal site of Ruihao Li
 # title: 'Ruihao Li'
 ---
 
-{{< lead >}}
+<!-- {{< lead >}}
 Theoretical Condensed Matter Physics
+{{< /lead >}} -->
+
+{{< lead >}}
+
 {{< /lead >}}
 
-Hi! I am a PhD candidate studying the spintronic aspects of topological materials at Case Western Reserve University (CWRU), including novel nonlinear transport phenomena, spin-charge conversion, etc. In addition to my current [research](/research/), I also have broad interests in emerging fields of science and technology, particularly quantum computing. 
-
-<!-- I am documenting some of my experiences in these areas on my [blog](/posts/) (*to appear soon*). -->
+Hi! I am a PhD candidate studying the spintronic aspects of topological materials at [Case Western Reserve University](https://case.edu/), including novel nonlinear transport phenomena, spin-charge conversion, etc. In addition to my current [research](/research/), I also have broad interests in emerging fields of science and technology, particularly quantum computing. You can see my recent experiences of quantum computing in some of my [blog posts](/blog/).
 
 
 <br>

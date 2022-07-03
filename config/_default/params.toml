@@ -38,7 +38,8 @@ showScrollToTop = true
   showTableOfContents = true
   showTaxonomies = true
   showWordCount = false
-  # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
+  showComment = true
+  # sharingLinks = ["twitter", "reddit", "email"]
 
 [list]
   showBreadcrumbs = false

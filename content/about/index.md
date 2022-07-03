@@ -4,6 +4,7 @@ showAuthor: false
 showDate: false
 showReadingTime: false
 showTableOfContents: false
+showComment: false
 ---
 
 {{< figure

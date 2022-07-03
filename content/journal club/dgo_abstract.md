@@ -3,6 +3,7 @@ title: "Journal Club"
 showAuthor: false
 showDate: false
 showReadingTime: false
+showComment: false
 # layout: "simple"
 ---
 

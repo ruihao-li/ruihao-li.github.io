@@ -3,6 +3,7 @@ title: "Research"
 showAuthor: false
 showDate: false
 showReadingTime: false
+showComment: false
 ---
 
 <figure>

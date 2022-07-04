@@ -19,7 +19,8 @@ html {
 }
 
 #comment {
-  width: 60%;
-  margin-right: 10pt;
+  width: 90%;
+  margin-left: -12%;
   margin-top: 20pt;
+  float: left;
 }

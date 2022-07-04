@@ -17,9 +17,10 @@ While setting it up on my website (based on the [Congo](https://github.com/jpant
 
 ```css
 #comment {
-  width: 60%;
-  margin-right: 10pt;
+  width: 90%;
+  margin-left: -12%;
   margin-top: 20pt;
+  float: left;
 }
 ```
 

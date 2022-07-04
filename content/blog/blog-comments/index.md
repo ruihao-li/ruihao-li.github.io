@@ -13,14 +13,15 @@ categories: []
 
 I am adding a comments widget to my blog. Now you can comment under the blog posts whenever as long as you have a GitHub account. I've always wanted one for the sole purpose of encouraging interactions and discussions. Just a place where you (readers) can quickly jot down your thoughts/comments/questions. [Hugo](https://gohugo.io/), which is the the framework this website is built on, ships with support for [Disqus](https://disqus.com/). I guess Disqus is fine for general uses, but I wanted something more lightweight, free of ads, and has Markdown support. Luckily I came across [Utterances](https://utteranc.es/) today. It's an open-source comments widget that is built on GitHub Issues, developed by [Jeremy Danyow](https://github.com/jdanyow) (Thank you!). I like its simplistic aesthetics and even better, there are multiple (dark) themes you can choose from. Most importantly, it supports Markdown in the comments. I think it would be even better if there is LaTeX support in the future! The general setup is quite simple and I think the [official guide](https://utteranc.es/) is all you really need.
 
-While setting it up on my website (based on the [Congo](https://github.com/jpanther/congo) theme for Hugo) by directly following the instructions, I encountered two small problems. One is the positioning of the comments widget, which is centrally aligned by default but was just sitting a bit too far to the right in my current layout. My way of mitigating this is to add a `<div>` tag with an `id` attribute which I call `"comment"` to the `comments.html` file (placed under `layouts/partials/`), which contains the `<script>` tag for Utterances. Then inside `custom.css` (under `assets/css/`) I added the following:
+While setting it up on my website (based on the [Congo](https://github.com/jpanther/congo) theme for Hugo) by directly following the instructions, I encountered two small problems. One is the positioning of the comments widget, which is centrally aligned by default but was just sitting a bit too far to the right in my current layout. My way of mitigating this is to add a `<div>` tag with a `class` attribute which I call `comment` to the `comments.html` file (placed under `layouts/partials/`), which contains the `<script>` tag for Utterances. Then inside `custom.css` (under `assets/css/`) I added the following:
 
 ```css
-#comment {
-  width: 90%;
-  margin-left: -12%;
-  margin-top: 20pt;
-  float: left;
+.comment {
+  width: 80%;
+  margin-left: -5%;
+  margin-top: 3em;
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 10px;
 }
 ```
 

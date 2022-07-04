@@ -18,9 +18,10 @@ html {
   width: 90%;
 }
 
-#comment {
-  width: 90%;
-  margin-left: -12%;
-  margin-top: 20pt;
-  float: left;
+.comment {
+  width: 80%;
+  margin-left: -5%;
+  margin-top: 3em;
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 10px;
 }

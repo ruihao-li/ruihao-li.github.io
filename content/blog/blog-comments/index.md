@@ -17,8 +17,7 @@ While setting it up on my website (based on the [Congo](https://github.com/jpant
 
 ```css
 .comment {
-  width: 80%;
-  margin-left: -5%;
+  max-width: 60ch;
   margin-top: 3em;
   box-shadow: 0 0 5px #ccc;
   border-radius: 10px;
@@ -35,7 +34,7 @@ This is what my final `comments.html` looks like:
 
 ```html
 {{ if .Params.showComment | default (.Site.Params.article.showComment | default true) }}
-    <div id="comment">
+    <div class="comment">
         <script src="https://utteranc.es/client.js"
         repo="ruihao-li/ruihao-li.github.io"
         issue-term="pathname"
@@ -50,4 +49,4 @@ This is what my final `comments.html` looks like:
 
 ## Update
 
-I just updated Congo to v2.3.0 today (July 6, 2022) and it now comes with the `showComments` support. See the implementation in `layouts/_default/single.html`. So to display the Utterances widget in your blog posts, simply provide the script in `layouts/partials/comments.html` and set the `showComments` parameter to `true` in your `config/_default/params.toml` file.
+I just updated Congo to v2.3.0 today (July 6, 2022) and it now comes with the `showComments` support. See the implementation in `layouts/_default/single.html`, which automatically solves both of my problems mentioned above. So if you are using Congo v2.3.0 and above, ignore everything I said above. To display the Utterances widget in your blog posts, simply provide the script in `layouts/partials/comments.html` and set the `showComments` parameter to `true` in your `config/_default/params.toml` file.

@@ -51,7 +51,7 @@ This weekend I spent some time tweaking the Terminal on my Mac with iTerm2 and F
 
 OK, there you go! Enjoy the fresh new look!
 
-## Update 1:
+## Update 1
 
 While setting up fish on a M1 Mac yesterday, I realized that the fish shell path is not the same as in Intel-based Macs. So if you have a Mac with Apple Silicon, after `brew install fish` you can run:
 - `fish_add_path /opt/homebrew/bin`

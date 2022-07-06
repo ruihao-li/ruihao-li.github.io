@@ -1,12 +1,10 @@
-{{ if .Params.showComment | default (.Site.Params.article.showComment | default true) }}
-    <div class="comment">
-        <script src="https://utteranc.es/client.js"
-        repo="ruihao-li/ruihao-li.github.io"
-        issue-term="pathname"
-        label="comment"
-        theme="gruvbox-dark"
-        crossorigin="anonymous"
-        async>
-        </script>
-    </div>
-{{ end }}
+<!-- {{ if .Params.showComment | default (.Site.Params.article.showComment | default true) }} -->
+<script src="https://utteranc.es/client.js"
+repo="ruihao-li/ruihao-li.github.io"
+issue-term="pathname"
+label="comment"
+theme="gruvbox-dark"
+crossorigin="anonymous"
+async>
+</script>
+<!-- {{ end }} -->

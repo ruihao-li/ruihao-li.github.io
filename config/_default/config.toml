@@ -5,7 +5,7 @@
 
 baseURL = "https://ruihao-li.github.io/"
 defaultContentLanguage = "en"
-theme = "congo"
+# theme = "congo"
 googleAnalytics = "G-KHKMR3EKTR"
 
 enableRobotsTXT = true

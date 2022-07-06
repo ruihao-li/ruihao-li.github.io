@@ -4,7 +4,7 @@ showAuthor: false
 showDate: false
 showReadingTime: false
 showTableOfContents: false
-showComment: false
+showComments: false
 ---
 
 {{< figure
@@ -33,7 +33,7 @@ showComment: false
 
 Welcome! My name is Ruihao Li (李瑞浩). I grew up in [Guangdong, China](https://en.wikipedia.org/wiki/Guangdong). When I started my undergraduate study at [The University of Sydney](https://www.sydney.edu.au/) in 2013, I aspired to be a molecular biologist. I spent around 6 months at [University of California San Diego (UCSD)](https://ucsd.edu/) as an exchange student when I was in my second year, after which my academic interest gradually shifted to high energy physics. In my final undergraduate year, I worked under the supervision of Dr. [Michael Schmidt](https://michael.cai-schmidt.org/) on a project about [quantum corrections in left-right symmetric seesaw mechanisms](/files/Honours_Thesis.pdf), which are theoretical models for explaining neutrino masses. After graduation, I began to pursue my Ph.D. in physics at [Case Western Reserve University (CWRU)](https://case.edu/) in 2017. I spent the first two years working with Dr. [Pavel Fileviez Perez](https://fileviez.com/) on the theory of leptophobic dark matter models. Starting from 2019, I have been working with Dr. [Shulei Zhang](https://physics.case.edu/faculty/shulei-zhang/) on charge and spin transport in topological quantum materials, especially topological semimetals. I make use of both analytical and numerical tools for my research, such as `Mathematica`, `Python`, `Julia`, etc. See my [research](/research/) for more details.
 
-Since late 2021, I have become more serious about one of my other passions, quantum computing. I am mainly interested in exploring quantum machine learning and optimizations in the noisy intermediate-scale quantum (NISQ) era. In Spring 2022 I took a graduate course on quantum computer (PHYS 486) at CWRU. I have also been actively involved in many events related to quantum computing, where I benefited a lot from getting exposed to cutting-edge research problems in both industry and academia, as well as interacting with experts and fellow students. Here are some of the highlights as of June 2022:
+Since late 2021, I have become more serious about one of my other passions, quantum computing. I am mainly interested in exploring quantum machine learning and optimizations in the noisy intermediate-scale quantum (NISQ) era. In Spring 2022 I took a graduate course on quantum computing (PHYS 486) at CWRU. I have also been actively involved in many events related to quantum computing, where I benefited a lot from getting exposed to cutting-edge research problems in both industry and academia, as well as interacting with experts and fellow students. Here are some of the highlights as of June 2022:
 
 - I have become [Qiskit-certified](https://www.credly.com/badges/d8b2f9bb-6e08-410c-89e2-cf98be2cbdd3?source=linked_in_profile)!
 - I completed all the coding challenges in [QHack 2022](/files/QHack_Coding_Challenge_Certificate.pdf) hosted by Xanadu.

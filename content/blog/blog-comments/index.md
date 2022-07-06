@@ -47,3 +47,7 @@ This is what my final `comments.html` looks like:
     </div>
 {{ end }}
 ```
+
+## Update
+
+I just updated Congo to v2.3.0 today (July 6, 2022) and it now comes with the `showComments` support. See the implementation in `layouts/_default/single.html`. So to display the Utterances widget in your blog posts, simply provide the script in `layouts/partials/comments.html` and set the `showComments` parameter to `true` in your `config/_default/params.toml` file.

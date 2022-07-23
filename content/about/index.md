@@ -7,13 +7,19 @@ showTableOfContents: false
 showComments: false
 ---
 
+<!-- <figure>
+    <img src="disco_diffusion.png" width=80%/ class="center">
+    <figcaption align="center"> AI generated art by [Disco Diffusion](https://github.com/alembics/disco-diffusion). </figcaption>
+</figure> -->
+
+<center>
 {{< figure
     src="disco_diffusion.png"
     alt="AI generated artwork"
     caption="AI generated art by [Disco Diffusion](https://github.com/alembics/disco-diffusion)."
-    default=false
     class="center_scaled"
     >}}
+</center>
 
 <!-- ### Education
 

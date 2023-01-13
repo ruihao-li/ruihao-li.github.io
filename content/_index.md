@@ -11,7 +11,7 @@ Theoretical Condensed Matter Physics
 
 {{< /lead >}}
 
-Hi! I am a PhD candidate studying the spintronic aspects of topological materials at [Case Western Reserve University](https://case.edu/), including novel nonlinear transport phenomena, spin-charge conversion, etc. In addition to my current [research](/research/), I also have broad interests in emerging fields of science and technology, particularly quantum computing. You can see my recent experiences of quantum computing in some of my [blog posts](/blog/).
+Hi! I am a PhD candidate studying the spintronic aspects of topological materials at [Case Western Reserve University](https://case.edu/), including novel nonlinear transport phenomena, spin-charge conversion, etc. In addition to my current [research](/research/), I also have broad interests in emerging fields of science and technology, particularly quantum computing. I like to document some of the interesting things I have learned lately in my [blog](/blog/).
 
 
 <br>

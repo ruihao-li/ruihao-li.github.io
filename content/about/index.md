@@ -37,6 +37,8 @@ showComments: false
 
 ## A Brief Bio
 
+See my [resume](/files/RL_resume_23.pdf) (03/2023) for a shorter summary.
+
 Welcome! My name is Ruihao Li (李瑞浩). I grew up in [Guangdong, China](https://en.wikipedia.org/wiki/Guangdong). I received my Bachelor's degree with First Class Honours in physics from [The University of Sydney](https://www.sydney.edu.au/) (Australia) in 2016. I also spent two quarters at [University of California San Diego (UCSD)](https://ucsd.edu/) as an exchange student during 2014 - 2015. In my final undergraduate year, I worked under the supervision of Dr. [Michael Schmidt](https://michael.cai-schmidt.org/) on [quantum corrections in left-right symmetric seesaw mechanisms](/files/Honours_Thesis.pdf), which are theoretical models for explaining neutrino masses. After that, I began to pursue my Ph.D. in physics at [Case Western Reserve University (CWRU)](https://case.edu/) in 2017. I spent the first two years working with Dr. [Pavel Fileviez Perez](https://fileviez.com/) on theories of leptophobic dark matter models. Starting from 2019, I have been working with Dr. [Shulei Zhang](https://physics.case.edu/faculty/shulei-zhang/) on charge and spin transport in topological quantum materials, especially topological semimetals. I make use of both analytical and numerical tools for my research, such as `Mathematica`, `Python`, `Julia`, etc. See my [research](/research/) for more details.
 
 Besides my current PhD research, I also have a strong interest in quantum computing (QC). My main interests lie in exploring quantum simulation of physical systems (e.g., many-body physics) and quantum machine learning with noisy intermediate-scale quantum (NISQ) devices. Recently, I have been involved in a few projects on QC:

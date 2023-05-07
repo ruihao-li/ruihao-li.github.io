@@ -31,9 +31,9 @@ I have also worked on Dirac and Majorana dark matter models that establish a pos
 ------
 
 ## Talks
-- [Introduction to (Qiskit) Quantum Machine Learning](/files/QML_slides.pdf) (2022) <br>
+- [Introduction to (Qiskit) Quantum Machine Learning](/files/QML_slides.pdf) (2022) with [demo](https://github.com/Case-Quantum-Computing-Club/CQC-qiskit-fall-fest-22/blob/main/resources/Qiskit_ML/QML_demo.ipynb) <br>
   Talk given in [Qiskit Fall Fest 2022](https://qiskit.org/events/fall-fest/) at CWRU, which I also co-organized.
-- [Introduction to QAOA](/files/QOSF_Meeting.pdf) (2022) <br>
+- [Introduction to Quantum Approximate Optimization Algorithm](/files/QOSF_Meeting.pdf) (2022) <br>
   Talk given at the [QOSF Mentorship Program](https://qosf.org/qc_mentorship/) meeting.
 - [Majorana Zero Modes in a Kitaev Chain](/files/CMP_JC_Spring_22.pdf) (2022) <br>
   Talk given at the CMP Journal Club at CWRU in Spring 2022. 

@@ -1,9 +1,6 @@
 languageCode = "en"
 languageName = "English"
-displayName = "EN"
-isoCode = "en"
 weight = 1
-rtl = false
 
 title = "Home"
 # logo = "img/profile.png"
@@ -11,8 +8,13 @@ title = "Home"
 # copyright = "Copy, _right?_ :thinking_face:"
 copyright = "© 2022-2023 Ruihao Li"
 
-# dateFormat = "2006-01-02"
 
+[params]
+  isoCode = "en"
+  displayName = "EN"
+  rtl = false
+  # dateFormat = "2006-01-02"
+  
 [author]
   name = "Ruihao Li"
   image = "img/profile.jpeg"

@@ -23,10 +23,13 @@ I have also worked on Dirac and Majorana dark matter models that establish a pos
 
 ## Publications
 
-1. **R.-H. Li**, P. Shen, and S. S.-L. Zhang, [*Tunable spin-charge conversion in topological Dirac semimetals*](https://aip.scitation.org/doi/10.1063/5.0077431), APL Mater. **10**, 041108 (2022).
-2. **R.-H. Li**, O. G. Heinonen, A. A. Burkov, and S. S.-L. Zhang, [*Nonlinear Hall effect in Weyl semimetals induced by chiral anomaly*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.045105), Phys. Rev. B **103**, 045105 (2021).
-3. P. Fileviez Perez, E. Golias, **R.-H. Li**, C. Murgui, and A. D. Plascencia, [*Anomaly-free dark matter models*](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.100.015017), Phys. Rev. D **100**, 015017 (2019).
-4. P. Fileviez Perez, E. Golias, **R.-H. Li**, and C. Murgui, [*Leptophobic dark matter and the baryon number violation scale*](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.035009), Phys. Rev. D **99**, 035009 (2019).
+1. Kostas Blekos*, Dean Brand*, Andrea Ceschini*, Chiao-Hui Chou*, **Rui-Hao Li***, Komal Pandya*, and Alessandro Summer*, [*A Review on Quantum Approximate Optimization Algorithm and its Variants*](https://arxiv.org/abs/2306.09198), arXiv:2306.09198 (2023).
+2. **R.-H. Li**, P. Shen, and S. S.-L. Zhang, [*Tunable spin-charge conversion in topological Dirac semimetals*](https://aip.scitation.org/doi/10.1063/5.0077431), APL Mater. **10**, 041108 (2022).
+3. **R.-H. Li**, O. G. Heinonen, A. A. Burkov, and S. S.-L. Zhang, [*Nonlinear Hall effect in Weyl semimetals induced by chiral anomaly*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.045105), Phys. Rev. B **103**, 045105 (2021).
+4. P. Fileviez Pere*, E. Golias*, **R.-H. Li***, C. Murgui*, and A. D. Plascencia*, [*Anomaly-free dark matter models*](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.100.015017), Phys. Rev. D **100**, 015017 (2019).
+5. P. Fileviez Perez*, E. Golias*, **R.-H. Li***, and C. Murgui*, [*Leptophobic dark matter and the baryon number violation scale*](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.035009), Phys. Rev. D **99**, 035009 (2019).
+
+[*]: All authors contributed equally and are listed in alphabetical order.
 
 ------
 

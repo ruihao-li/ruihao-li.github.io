@@ -6,30 +6,39 @@ showReadingTime: false
 showComments: false
 ---
 
-<figure>
+<!-- <figure>
     <img src="research_0622.svg" width=80%/ class="center">
     <figcaption align="center"> Some Weyl cones and Feynman diagrams. </figcaption>
-</figure>
+</figure> -->
 
 
 
 ## Overview
 
-My current PhD research focuses on the investigation of novel spin/charge transport phenomena in topological materials. Specifically, topological semimetals, such as Weyl and Dirac semimetals, are three-dimensional topological phases with gapless excitations. Due to the interplay of their unique topology and symmetries, they exhibit topologically protected boundary excitations---[Fermi arc states](https://arxiv.org/abs/1702.07310) for Weyl semimetals and [higher-order Fermi arc (HOFA) states](https://arxiv.org/abs/1908.00016) for Dirac semimetals---as well as interesting phenomena like the chiral anomaly, which manifests in novel transport responses such as the [negative magnetoresistance](https://arxiv.org/abs/1206.1627) and the [nonlinear Hall effect](https://arxiv.org/abs/2007.10887) proposed in one of our works. More details can be found in this [review article](https://arxiv.org/abs/1705.01111).
+My current research interests are focused on leveraging near-term quantum computers to solve problems in various domains, which include but are not limited to:
+- **Simulation of many-body systems**: creating exotic phases of matter, simulating phase transitions, improving techniques for Hamiltonian simulation with the help of machine learning, etc.
+- **Optimization**: exploring quantum optimization algorithms, such as the Quantum Approximate Optimization Algorithm (QAOA), Variational Quantum Eigensolver (VQE), etc. and their applications in life science problems such as protein folding and drug discovery
+- **Machine learning**: developing and benchmarking quantum machine learning algorithms for electronic health records, medical imaging, etc.
 
-I have also worked on Dirac and Majorana dark matter models that establish a possible connection between baryon number violation and dark matter phenomenology. See publications below for more details.
+My past research experience includes:
+- **Topological materials**: investigating novel spin/charge transport phenomena in topological semimetals, such as Weyl and Dirac semimetals
+- **Dark matter models**: studying the phenomenology of dark matter models in theories with a gauged baryon symmetry 
+
+<!-- My current PhD research focuses on the investigation of novel spin/charge transport phenomena in topological materials. Specifically, topological semimetals, such as Weyl and Dirac semimetals, are three-dimensional topological phases with gapless excitations. Due to the interplay of their unique topology and symmetries, they exhibit topologically protected boundary excitations---[Fermi arc states](https://arxiv.org/abs/1702.07310) for Weyl semimetals and [higher-order Fermi arc (HOFA) states](https://arxiv.org/abs/1908.00016) for Dirac semimetals---as well as interesting phenomena like the chiral anomaly, which manifests in novel transport responses such as the [negative magnetoresistance](https://arxiv.org/abs/1206.1627) and the [nonlinear Hall effect](https://arxiv.org/abs/2007.10887) proposed in one of our works. More details can be found in this [review article](https://arxiv.org/abs/1705.01111).
+
+I have also worked on Dirac and Majorana dark matter models that establish a possible connection between baryon number violation and dark matter phenomenology. See publications below for more details. -->
 
 ------
 
 ## Publications
 
-1. Kostas Blekos*, Dean Brand*, Andrea Ceschini*, Chiao-Hui Chou*, **Rui-Hao Li***, Komal Pandya*, and Alessandro Summer*, [*A Review on Quantum Approximate Optimization Algorithm and its Variants*](https://arxiv.org/abs/2306.09198), arXiv:2306.09198 (2023).
-2. **R.-H. Li**, P. Shen, and S. S.-L. Zhang, [*Tunable spin-charge conversion in topological Dirac semimetals*](https://aip.scitation.org/doi/10.1063/5.0077431), APL Mater. **10**, 041108 (2022).
+1. Kostas Blekos*, Dean Brand*, Andrea Ceschini*, Chiao-Hui Chou*, **Rui-Hao Li***, Komal Pandya*, and Alessandro Summer*, [*A review on Quantum Approximate Optimization Algorithm and its variants*](https://doi.org/10.1016/j.physrep.2024.03.002), Phys. Rep. **1068**, 1 (2024).
+2. **R.-H. Li***, P. Shen*, and S. S.-L. Zhang, [*Tunable spin-charge conversion in topological Dirac semimetals*](https://aip.scitation.org/doi/10.1063/5.0077431), APL Mater. **10**, 041108 (2022).
 3. **R.-H. Li**, O. G. Heinonen, A. A. Burkov, and S. S.-L. Zhang, [*Nonlinear Hall effect in Weyl semimetals induced by chiral anomaly*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.045105), Phys. Rev. B **103**, 045105 (2021).
 4. P. Fileviez Pere*, E. Golias*, **R.-H. Li***, C. Murgui*, and A. D. Plascencia*, [*Anomaly-free dark matter models*](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.100.015017), Phys. Rev. D **100**, 015017 (2019).
 5. P. Fileviez Perez*, E. Golias*, **R.-H. Li***, and C. Murgui*, [*Leptophobic dark matter and the baryon number violation scale*](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.035009), Phys. Rev. D **99**, 035009 (2019).
 
-[*]: All authors contributed equally and are listed in alphabetical order.
+[*]: denotes equal contribution
 
 ------
 

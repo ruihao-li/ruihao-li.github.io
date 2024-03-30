@@ -24,7 +24,8 @@ copyright = "© 2022-2023 Ruihao Li"
     { linkedin = 'https://www.linkedin.com/in/rui-hao-li/' },
     { github = "https://github.com/ruihao-li" },
     { twitter = "https://twitter.com/rui_hao_li" },
-    { google = "https://scholar.google.com/citations?user=6rH6RpcAAAAJ&hl=en"},
+    { google-scholar = "https://scholar.google.com/citations?user=6rH6RpcAAAAJ&hl=en"},
+    { orcid = "https://orcid.org/my-orcid?orcid=0000-0001-6366-5921" },
     { envelope-solid = 'mailto:lrui6394@gmail.com' },
   ]
   # links = [

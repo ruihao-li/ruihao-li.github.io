@@ -37,18 +37,28 @@ showComments: false
 
 ## A Brief Bio
 
-See my [resume](/files/RL_resume_23.pdf) (06/2023) for a shorter summary.
+<!-- See my [resume](/files/RL_resume_23.pdf) (06/2023) for a shorter summary. -->
 
-Welcome! My name is Ruihao Li (李瑞浩). I grew up in [Guangdong, China](https://en.wikipedia.org/wiki/Guangdong). I received my Bachelor's degree with First Class Honours in physics from [The University of Sydney](https://www.sydney.edu.au/) (Australia) in 2016. I also spent two quarters at [University of California San Diego (UCSD)](https://ucsd.edu/) as an exchange student during 2014 - 2015. In my final undergraduate year, I worked under the supervision of Dr. [Michael Schmidt](https://michael.cai-schmidt.org/) on [quantum corrections in left-right symmetric seesaw mechanisms](/files/Honours_Thesis.pdf), which are theoretical models for explaining neutrino masses. After that, I began to pursue my Ph.D. in physics at [Case Western Reserve University (CWRU)](https://case.edu/) in 2017. I spent the first two years working with Dr. [Pavel Fileviez Perez](https://fileviez.com/) on theories of leptophobic dark matter models. Starting from 2019, I have been working with Dr. [Shulei Zhang](https://physics.case.edu/faculty/shulei-zhang/) on charge and spin transport in topological quantum materials, especially topological semimetals. I make use of both analytical and numerical tools for my research, such as `Mathematica`, `Python`, `Julia`, etc. See my [research](/research/) for more details.
+Welcome! My name is Ruihao Li (李瑞浩). 
+I grew up in [Guangdong, China](https://en.wikipedia.org/wiki/Guangdong). 
+I received my Bachelor's degree with First Class Honours in physics from [The University of Sydney](https://www.sydney.edu.au/) (Australia) in 2016. 
+After that, I began to pursue my Ph.D. in physics at [Case Western Reserve University (CWRU)](https://case.edu/) in 2017. 
+I spent the first two years working with Dr. [Pavel Fileviez Perez](https://fileviez.com/) on theories of leptophobic dark matter models. 
+From 2019, I started working with Dr. [Shulei Zhang](https://physics.case.edu/faculty/shulei-zhang/) on charge and spin transport in topological quantum materials, especially topological semimetals. 
+I graduated in 2023 and am currently working as a Quantum Research Data Scientist at [Center for Computational Life Sciences, Lerner Research Institute, Cleveland Clinic](https://my.clevelandclinic.org/research/computational-life-sciences), working on quantum computing applications in life sciences.
+I make use of both analytical and numerical tools for my research, including `Mathematica`, `Python`, `Julia`, etc. 
+See my [research](/research/) for more details.
+<!-- I also spent two quarters at [University of California San Diego (UCSD)](https://ucsd.edu/) as an exchange student during 2014 - 2015.  -->
+<!-- In my final undergraduate year, I worked under the supervision of Dr. [Michael Schmidt](https://michael.cai-schmidt.org/) on [quantum corrections in left-right symmetric seesaw mechanisms](/files/Honours_Thesis.pdf), which are theoretical models for explaining neutrino masses. -->
 
-Besides my current PhD research, I also have a strong interest in quantum computing (QC). My main interests lie in exploring quantum simulation of physical systems (e.g., many-body physics) and quantum machine learning with noisy intermediate-scale quantum (NISQ) devices. Recently, I have been involved in a few projects on QC:
+<!-- Besides my current PhD research, I also have a strong interest in quantum computing (QC). My main interests lie in exploring quantum simulation of physical systems (e.g., many-body physics) and quantum machine learning with noisy intermediate-scale quantum (NISQ) devices. Recently, I have been involved in a few projects on QC:
 
 - I am currently working on a review and benchmarking of the quantum approximate optimization algorithm (QAOA), as part of the [Quantum Open Source Foundation (QOSF) Mentorship Program](https://qosf.org/qc_mentorship/) (2022.4 - present). The preprint is out: [arXiv:2306.09198](https://arxiv.org/abs/2306.09198).
 - I worked as a Quantum Algorithms Researcher summer intern at [Agnostiq](https://agnostiq.ai/) in 2022, focusing on developing non-trivial variational algorithms for novelty/anomaly detection (2022.5 - 2022.8).
 - I implemented some features of the [XP stabilizer formalism](https://quantum-journal.org/papers/q-2022-09-22-815/) in [Qiskit QEC](https://github.com/qiskit-community/qiskit-qec), a new open-source framework for quantum error correction, as part of the [Qiskit Advocate Mentorship Program](https://github.com/qiskit-advocate/qamp-spring-22) (2022.9 - 2022.12).
 
 
-See other QC-related activities I have participated in [here](https://www.linkedin.com/in/rui-hao-li/details/certifications/). 
+See other QC-related activities I have participated in [here](https://www.linkedin.com/in/rui-hao-li/details/certifications/).  -->
 
 <!-- - 04/22: I took part in the 24-hour [QC Hack 2022](/files/QCHack2022_Certificate.pdf) Hackathon and together with four other teammates, we built a prototype of the quantum snakes-and-ladders game and won one of the [Honorable Mentions](https://www.quantumcoalition.io/winners-2022) in the IBM Quantum Challenge.
 - 04/22: I was selected as one of the mentees for the [Quantum Open Source Foundation (QOSF) Mentorship Program](https://qosf.org/qc_mentorship/) and began working on a project on the quantum approximate optimization algorithm (QAOA).
@@ -61,7 +71,7 @@ See other QC-related activities I have participated in [here](https://www.linked
 ## Other Interests
 
   <!-- - I occasionally contemplate quantitative finance with tools like [Zipline](https://github.com/quantrocket-llc/zipline) and [Moonshot](https://github.com/quantrocket-llc/moonshot). :chart_with_upwards_trend: -->
-  - Huge fan of basketball, the [NBA](https://www.nba.com/), and LeBron James :crown:
+  - Huge fan of basketball, the NBA, and LeBron James :crown:
   - Avid cook from time to time :shallow_pan_of_food:
   - Animal videos all day :cat:
-  - Most of mechanical stuff :gear:
+  - Mechanical stuff and tech gadgets :gear:

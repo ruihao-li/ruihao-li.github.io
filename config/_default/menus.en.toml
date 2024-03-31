@@ -20,15 +20,15 @@
   pageRef = "research"
   weight = 20
 
-[[main]]
-  name = "Journal Club"
-  pageRef = "journal club"
-  weight = 30
+# [[main]]
+#   name = "Journal Club"
+#   pageRef = "journal club"
+#   weight = 30
 
 [[main]]
   name = "Blog"
   pageRef = "blog"
-  weight = 40
+  weight = 30
 
 
 # -- Footer Menu --

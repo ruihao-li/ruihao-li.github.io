@@ -20,9 +20,10 @@ My current research interests are focused on leveraging near-term quantum comput
 - **Optimization**: exploring quantum optimization algorithms, such as the Quantum Approximate Optimization Algorithm (QAOA), Variational Quantum Eigensolver (VQE), etc. and their applications in life science problems such as protein folding and drug discovery
 - **Machine learning**: developing and benchmarking quantum machine learning algorithms for electronic health records, medical imaging, etc.
 
-My past research experience includes:
+Things I have worked on in the past:
 - **Topological materials**: investigating novel spin/charge transport phenomena in topological semimetals, such as Weyl and Dirac semimetals
 - **Dark matter models**: studying the phenomenology of dark matter models in theories with a gauged baryon symmetry 
+
 
 <!-- My current PhD research focuses on the investigation of novel spin/charge transport phenomena in topological materials. Specifically, topological semimetals, such as Weyl and Dirac semimetals, are three-dimensional topological phases with gapless excitations. Due to the interplay of their unique topology and symmetries, they exhibit topologically protected boundary excitations---[Fermi arc states](https://arxiv.org/abs/1702.07310) for Weyl semimetals and [higher-order Fermi arc (HOFA) states](https://arxiv.org/abs/1908.00016) for Dirac semimetals---as well as interesting phenomena like the chiral anomaly, which manifests in novel transport responses such as the [negative magnetoresistance](https://arxiv.org/abs/1206.1627) and the [nonlinear Hall effect](https://arxiv.org/abs/2007.10887) proposed in one of our works. More details can be found in this [review article](https://arxiv.org/abs/1705.01111).
 

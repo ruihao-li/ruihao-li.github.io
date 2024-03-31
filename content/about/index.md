@@ -45,7 +45,8 @@ I received my Bachelor's degree with First Class Honours in physics from [The Un
 After that, I began to pursue my Ph.D. in physics at [Case Western Reserve University (CWRU)](https://case.edu/) in 2017. 
 I spent the first two years working with Dr. [Pavel Fileviez Perez](https://fileviez.com/) on theories of leptophobic dark matter models. 
 From 2019, I started working with Dr. [Shulei Zhang](https://physics.case.edu/faculty/shulei-zhang/) on charge and spin transport in topological quantum materials, especially topological semimetals. 
-I graduated in 2023 and am currently working as a Quantum Research Data Scientist at [Center for Computational Life Sciences, Lerner Research Institute, Cleveland Clinic](https://my.clevelandclinic.org/research/computational-life-sciences), working on quantum computing applications in life sciences.
+I graduated in 2023 and am currently working as a Quantum Research Data Scientist at [Center for Computational Life Sciences, Lerner Research Institute, Cleveland Clinic](https://my.clevelandclinic.org/research/computational-life-sciences), focusing on developing quantum computing applications in life sciences.
+I am also actively working on quantum computing projects in physics and am interested in developing open-source tools for research and education.
 I make use of both analytical and numerical tools for my research, including `Mathematica`, `Python`, `Julia`, etc. 
 See my [research](/research/) for more details.
 <!-- I also spent two quarters at [University of California San Diego (UCSD)](https://ucsd.edu/) as an exchange student during 2014 - 2015.  -->

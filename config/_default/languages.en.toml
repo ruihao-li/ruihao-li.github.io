@@ -2,7 +2,7 @@ languageCode = "en"
 languageName = "English"
 weight = 1
 
-title = "Home"
+title = "Ruihao Li"
 # logo = "img/profile.png"
 # description = "My personal website"
 # copyright = "Copy, _right?_ :thinking_face:"
@@ -18,7 +18,7 @@ copyright = "© 2022-2023 Ruihao Li"
 [author]
   name = "Ruihao Li"
   image = "img/profile.jpeg"
-  headline = "Theoretical Condensed Matter Physics"
+  headline = "Quantum Computing Researcher"
   # bio = "A little bit about you"
   links = [
     { linkedin = 'https://www.linkedin.com/in/rui-hao-li/' },

@@ -2,7 +2,7 @@
 title: "Quantum simulation of many-body physics - I"
 date: 2022-06-04
 draft: false
-tags: [quantum-computing, physics]
+tags: [quantum computing, physics]
 categories: []
 ---
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Ruihao Li</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on Ruihao Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2022-2023 Ruihao Li</copyright>
+    <lastBuildDate>Mon, 09 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Supercharging the Pythonic Metropolis Monte Carlo</title>
+      <link>http://localhost:1313/blog/2d-ising-model/</link>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2d-ising-model/</guid>
+      <description>Okay, I&amp;rsquo;ll admit that this is neither a super exciting nor a new topic to write about.</description>
+    </item>
+  </channel>
+</rss>

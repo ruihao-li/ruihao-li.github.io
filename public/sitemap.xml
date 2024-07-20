@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    
+      <url>
+            <loc>http://localhost:1313/</loc>
+            <lastmod>2023-01-09T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/blog/</loc>
+            <lastmod>2023-01-09T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/blog/2d-ising-model/</loc>
+            <lastmod>2023-01-09T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/blog/blog-comments/</loc>
+            <lastmod>2022-07-03T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/blog/ibm-spring-challenge-3/</loc>
+            <lastmod>2022-06-26T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/blog/ibm-spring-challenge-2/</loc>
+            <lastmod>2022-06-18T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/blog/ibm-spring-challenge-1/</loc>
+            <lastmod>2022-06-04T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/blog/fish-shell-customization/</loc>
+            <lastmod>2022-05-08T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/about/</loc>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/journal-club/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/journal-club/dgo_abstract/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/research/</loc>
+          </url>
+    
+  
+</urlset>

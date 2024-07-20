@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on Ruihao Li</title>
+    <link>http://localhost:1313/tags/software/</link>
+    <description>Recent content in Software on Ruihao Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2022-2023 Ruihao Li</copyright>
+    <lastBuildDate>Sun, 03 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding blog comments</title>
+      <link>http://localhost:1313/blog/blog-comments/</link>
+      <pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/blog-comments/</guid>
+      <description>Comments widget by Utterances.</description>
+    </item>
+    <item>
+      <title>Fish shell and customization</title>
+      <link>http://localhost:1313/blog/fish-shell-customization/</link>
+      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/fish-shell-customization/</guid>
+      <description>A quick peek at the shell interface.</description>
+    </item>
+  </channel>
+</rss>

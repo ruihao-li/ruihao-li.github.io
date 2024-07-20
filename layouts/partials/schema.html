@@ -30,7 +30,7 @@
     "url" : "{{ .Permalink }}",
     "author" : {
       "@type": "Person",
-      "name": "{{ .Site.Author.name | safeJS }}"
+      "name": "{{ .Site.Language.Params.Author.name | safeJS }}"
     },
     {{ with .PublishDate }}"copyrightYear": "{{ .Format "2006" }}",{{ end }}
     {{ with .Date }}"dateCreated": "{{ .Format $iso8601 }}",{{ end }}

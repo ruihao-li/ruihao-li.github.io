@@ -15,9 +15,9 @@ copyright = "© 2022-2023 Ruihao Li"
   rtl = false
   # dateFormat = "2006-01-02"
   
-[author]
+[params.author]
   name = "Ruihao Li"
-  image = "img/profile.jpeg"
+  image = "img/author.jpeg"
   headline = "Quantum Computing Researcher"
   # bio = "A little bit about you"
   links = [

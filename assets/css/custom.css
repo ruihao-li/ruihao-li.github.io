@@ -1,39 +1,40 @@
-/* Increase the default font size */
+/* Original site font, with a 20px base at the browser's default 16px setting. */
 html {
-  font-size: 14pt;
-  font-weight: 100;
-  font-family: "Nunito", sans-serif, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Nunito", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 125%;
+}
+
+/* Keep long article titles within narrow screens at the larger text size. */
+main h1 {
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 code,
 kbd,
 samp,
 pre {
-  font-family: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;;
+  font-family: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+/* Compatibility classes preserve the sizing of existing article images. */
 .center {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto;
+}
+
+.center_scaled,
+.center_scaled_smaller {
+  display: block;
+  margin-inline: auto;
 }
 
 .center_scaled {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 90%;
 }
 
 .center_scaled_smaller {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 70%;
-}
-
-.max-w-prose {
-  max-width: 72ch;
 }

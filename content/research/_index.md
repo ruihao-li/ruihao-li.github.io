@@ -4,6 +4,7 @@ showAuthor: false
 showDate: false
 showReadingTime: false
 showComments: false
+layout: "simple"
 ---
 
 <!-- <figure>

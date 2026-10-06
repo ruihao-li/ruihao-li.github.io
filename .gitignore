@@ -1,2 +1,6 @@
 **/.DS_Store
 *.DS_Store
+
+# Local previews; public/ contains historical tracked output.
+.build/
+.hugo_build.lock

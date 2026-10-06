@@ -1,5 +1,6 @@
-languageCode = "en"
-languageName = "English"
+locale = "en"
+label = "English"
+direction = "ltr"
 weight = 1
 
 title = "Ruihao Li"
@@ -10,9 +11,6 @@ copyright = "© 2022-2023 Ruihao Li"
 
 
 [params]
-  isoCode = "en"
-  displayName = "EN"
-  rtl = false
   # dateFormat = "2006-01-02"
   
 [params.author]

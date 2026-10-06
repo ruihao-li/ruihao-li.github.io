@@ -1,8 +1,8 @@
-/* Original site font, with a 20px base at the browser's default 16px setting. */
+/* Original site font, with an 18px base at the browser's default 16px setting. */
 html {
   font-family: "Nunito", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
-  font-size: 125%;
+  font-size: 112.5%;
 }
 
 /* Keep long article titles within narrow screens at the larger text size. */

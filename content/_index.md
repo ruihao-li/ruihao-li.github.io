@@ -1,25 +1,12 @@
 ---
-description: Personal site of Ruihao Li
-# title: 'Ruihao Li'
+description: Ruihao Li — quantum algorithms researcher working on many-body physics, state preparation, and optimization.
 ---
 
-<!-- {{< lead >}}
-Theoretical Condensed Matter Physics
-{{< /lead >}} -->
+Hi there! 👋 
+I am a quantum algorithms researcher and Research Data Scientist at [Cleveland Clinic Research](https://www.lerner.ccf.org/).
+My work focuses on many-body physics, quantum simulation, and optimization.
+I am currently working on quantum thermal state preparation and quantum algorithms for protein structure prediction.
 
-{{< lead >}}
-
-{{< /lead >}}
-
-Hi there! 👋
-I am currently a Quantum Research Data Scientist at [Center for Computational Life Sciences, Lerner Research Institute, Cleveland Clinic](https://my.clevelandclinic.org/research/computational-life-sciences).
-I am a physicist by training, with a Ph.D. from [Case Western Reserve University](https://case.edu/).
-I work on interesting quantum computing problems in physics and life sciences.
-Beyond what I do in my [research](/research/), I am also broadly interested in emerging AI technologies.
-<!-- Sometimes I write stuff on my [blog](/blog/). -->
-<!-- I am a PhD candidate at [Case Western Reserve University](https://case.edu/), researching on spintronics in topological materials as well as quantum computing.  -->
-
-<br>
 
 {{< button href="/about/" target="_self" >}}
 About

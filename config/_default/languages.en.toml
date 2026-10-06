@@ -7,7 +7,7 @@ title = "Ruihao Li"
 # logo = "img/profile.png"
 # description = "My personal website"
 # copyright = "Copy, _right?_ :thinking_face:"
-copyright = "© 2022-2023 Ruihao Li"
+copyright = "© 2022–2026 Ruihao Li"
 
 
 [params]
@@ -16,7 +16,7 @@ copyright = "© 2022-2023 Ruihao Li"
 [params.author]
   name = "Ruihao Li"
   image = "img/author.jpeg"
-  headline = "Quantum Computing Researcher"
+  headline = "Quantum Algorithms Researcher"
   # bio = "A little bit about you"
   links = [
     { linkedin = 'https://www.linkedin.com/in/rui-hao-li/' },
